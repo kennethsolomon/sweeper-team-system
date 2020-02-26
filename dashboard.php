@@ -12,6 +12,7 @@
 =========================================================
 
  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
+<?php include('server.php'); ?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -57,13 +58,13 @@
                                 </a>
                             </li>
                         </ul>
-                        <ul class="navbar-nav ml-auto">
+                        <!-- <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="#pablo">
                                     <span class="no-icon">Log out</span>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </nav>
@@ -71,8 +72,12 @@
             <div class="content">
                 <div class="container-fluid">
 
+                    <!-- Display Area -->
+                    <div id="display_area"></div>
+
                     <!-- Modal -->
                     <?php include_once './modals/addUserModal.php' ?>
+
 
                 </div>
             </div>
@@ -183,9 +188,11 @@
         // Javascript method's body can be found in assets/js/demos.js
         demo.initDashboardPageCharts();
 
-        demo.showNotification('test');
+        // demo.showNotification("Goodshit!");
 
     });
 </script>
+
+<script src="script.js"></script>
 
 </html>

@@ -13,7 +13,7 @@
                         <h4 class="card-title">Add Patient</h4>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="post">
                             <div class="row">
                                 <div class="col-md-12 pl-1">
                                     <div class="form-group">
@@ -35,12 +35,18 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="row">
+                                <div class="col-md-12 pl-1">
+                                    <div class="form-group">
+                                        <input id="dateOfBirth" name="dateOfBirth" type="date" class="form-control" placeholder="Last Name" value="">
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-6 pr-1">
                                     <div class="form-group">
                                         <label>Wards</label>
-                                        <select class="form-control" id="category">
+                                        <select class="form-control" id="ward">
                                             <option value="General">General</option>
                                             <option value="Pedia/Surgery">Pedia/Surgery</option>
                                             <option value="OB">OB</option>
@@ -50,7 +56,7 @@
                                 </div>
                                 <div class="col-md-6 pl-1 mt-5">
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+                                        <button type="submit" id="submit_btn" class="btn btn-info btn-fill pull-right">Update Profile</button>
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>

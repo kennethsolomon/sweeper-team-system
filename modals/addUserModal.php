@@ -15,7 +15,7 @@
                     <div class="card-body">
                         <form>
                             <div class="row">
-                                <div class="col-md-12 pr-1">
+                                <div class="col-md-12 pl-1">
                                     <div class="form-group">
                                         <input id="lastName" name="lastName" type="text" class="form-control" placeholder="Last Name" value="">
                                     </div>
@@ -55,7 +55,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </div>

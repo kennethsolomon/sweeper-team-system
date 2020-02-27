@@ -9,8 +9,12 @@ if (isset($_POST['searchText'])) {
     $query = "SELECT * FROM patient WHERE lastName LIKE '%$inpText%'";
     $result = mysqli_query($conn, $query);
 
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo ' <a href="#" id="searchList" class="list-group-item list-group-item-action border-1">' . $row['lastName'] .  ', ' . $row['firstName'] . '</a>';
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo ' <a href="#" id="searchList" class="list-group-item list-group-item-action border-1">' . $row['lastName'] .  ', ' . $row['firstName'] . '</a>';
+        }
+    } else {
+        echo ' <a href="#" class="list-group-item list-group-item-action border-1">No Result</a>';
     }
 }
 
@@ -23,10 +27,11 @@ if (isset($_POST['save'])) {
     $dateOfBirth = $_POST['dateOfBirth'];
     $ward = $_POST['ward'];
 
-    $sql = "INSERT INTO patient (uId, lastName, firstName, middleName, dateOfBirth, ward) VALUES ('{$uId}', '{$lastName}', '{$firstName}', '{$middleName}', '{$dateOfBirth}', '{$ward}')";
-    if (mysqli_query($conn, $sql)) {
-        $id = mysqli_insert_id($conn);
-        $saved_user = '
+    $queryAlreadyExist = "SELECT * FROM patient WHERE lastName='$lastName' AND firstName='$firstName' and dateOfBirth='$dateOfBirth'";
+    $resultAlreadyExist = mysqli_query($conn, $queryAlreadyExist);
+
+    if (mysqli_num_rows($resultAlreadyExist) > 0) {
+        $alreadyExist = '
         <script>
         window.setTimeout(function() {
             $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
@@ -34,15 +39,32 @@ if (isset($_POST['save'])) {
             });
           }, 3000);
         </script>
-        <div id="alert_message" class="alert alert-info text-center">
-          Succesfully Added a new Patient!
+        <div id="alert_message" class="alert alert-danger text-center">
+          Patient Already Exist!
         </div>
         ';
-        echo $saved_user;
+        echo $alreadyExist;
     } else {
-        echo "Error: " . mysqli_error($conn);
+        $sql = "INSERT INTO patient (uId, lastName, firstName, middleName, dateOfBirth, ward) VALUES ('{$uId}', '{$lastName}', '{$firstName}', '{$middleName}', '{$dateOfBirth}', '{$ward}')";
+        if (mysqli_query($conn, $sql)) {
+            $saved_user = '
+            <script>
+            window.setTimeout(function() {
+                $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
+                  $(this).remove(); 
+                });
+              }, 3000);
+            </script>
+            <div id="alert_message" class="alert alert-info text-center">
+              Succesfully Added a new Patient!
+            </div>
+            ';
+            echo $saved_user;
+        } else {
+            echo "Error: " . mysqli_error($conn);
+        }
+        exit();
     }
-    exit();
 }
 // // delete comment fromd database
 // if (isset($_GET['delete'])) {

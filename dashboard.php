@@ -82,10 +82,12 @@
                     <div class="row" style="margin-left:210px">
                         <div class="col-md-12  bg-light p-4 mt-3 rounded">
                             <h2 style="margin-left:500px">Patient Search:</h2>
+
                             <form action="server.php" class="form-inline p-3" method="post">
                                 <input type="text" name="search" id="search" class="form-control form-control-lg rounded-0 border-info" placeholder="Search..." style="width:80%">
                                 <input type="submit" name="submit" value="Search" class="btn btn-info btn-md rounded-0" stlye="width:20%">
                             </form>
+
                         </div>
                         <div class="col-md-9" style="position:relative; margin-top:-38px; margin-left:25px">
                             <div class="list-group" id="show-list">

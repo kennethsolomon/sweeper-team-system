@@ -1,15 +1,13 @@
-const uId = function() {
-  return (
-    Date.now().toString(36) +
-    Math.random()
-      .toString(36)
-      .substr(2)
-  );
-};
 $(document).ready(function() {
   // save comment to database
   $(document).on("click", "#submit_btn", function() {
-    var uId = uId;
+    const generatedId =
+      Date.now().toString(36) +
+      Math.random()
+        .toString(36)
+        .substr(2);
+
+    var uId = generatedId;
     var lastName = $("#lastName").val();
     var firstName = $("#firstName").val();
     var middleName = $("#middleName").val();

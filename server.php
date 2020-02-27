@@ -16,7 +16,14 @@ if (isset($_POST['save'])) {
     if (mysqli_query($conn, $sql)) {
         $id = mysqli_insert_id($conn);
         $saved_user = '
-        <div class="alert alert-info text-center">
+        <script>
+        window.setTimeout(function() {
+            $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
+              $(this).remove(); 
+            });
+          }, 3000);
+        </script>
+        <div id="alert_message" class="alert alert-info text-center">
           Succesfully Added a new Patient!
         </div>
         ';

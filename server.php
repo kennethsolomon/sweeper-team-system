@@ -1,37 +1,39 @@
 <?php
 $conn = mysqli_connect('localhost', 'root', '', 'dietary');
 if (!$conn) {
-    die('Connection failed ' . mysqli_error($conn));
+  die('Connection failed ' . mysqli_error($conn));
 }
 
+//Search Patient
 if (isset($_POST['searchText'])) {
-    $inpText = $_POST['searchText'];
-    $query = "SELECT * FROM patient WHERE lastName LIKE '%$inpText%'";
-    $result = mysqli_query($conn, $query);
+  $inpText = $_POST['searchText'];
+  $query = "SELECT * FROM patient WHERE lastName LIKE '%$inpText%'";
+  $result = mysqli_query($conn, $query);
 
-    if (mysqli_num_rows($result) > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            echo ' <a href="searchList.php?uId=' . $row['uId'] . '" id="searchList" class="list-group-item list-group-item-action border-1">' . $row['lastName'] .  ', ' . $row['firstName'] . '</a>';
-        }
-    } else {
-        echo ' <a href="#" class="list-group-item list-group-item-action border-1">No Result</a>';
+  if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+      echo ' <a href="searchList.php?uId=' . $row['uId'] . '" id="searchList" class="list-group-item list-group-item-action border-1">' . $row['lastName'] .  ', ' . $row['firstName'] . '</a>';
     }
+  } else {
+    echo ' <a href="#" class="list-group-item list-group-item-action border-1">No Result</a>';
+  }
 }
 
+//Save Patient Info
 if (isset($_POST['save'])) {
 
-    $uId = $_POST['uId'];
-    $lastName = $_POST['lastName'];
-    $firstName = $_POST['firstName'];
-    $middleName = $_POST['middleName'];
-    $dateOfBirth = $_POST['dateOfBirth'];
-    $ward = $_POST['ward'];
+  $uId = $_POST['uId'];
+  $lastName = $_POST['lastName'];
+  $firstName = $_POST['firstName'];
+  $middleName = $_POST['middleName'];
+  $dateOfBirth = $_POST['dateOfBirth'];
+  $ward = $_POST['ward'];
 
-    $queryAlreadyExist = "SELECT * FROM patient WHERE lastName='$lastName' AND firstName='$firstName' and dateOfBirth='$dateOfBirth'";
-    $resultAlreadyExist = mysqli_query($conn, $queryAlreadyExist);
+  $queryAlreadyExist = "SELECT * FROM patient WHERE lastName='$lastName' AND firstName='$firstName' and dateOfBirth='$dateOfBirth'";
+  $resultAlreadyExist = mysqli_query($conn, $queryAlreadyExist);
 
-    if (mysqli_num_rows($resultAlreadyExist) > 0) {
-        $alreadyExist = '
+  if (mysqli_num_rows($resultAlreadyExist) > 0) {
+    $alreadyExist = '
         <script>
         window.setTimeout(function() {
             $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
@@ -43,11 +45,11 @@ if (isset($_POST['save'])) {
           Patient Already Exist!
         </div>
         ';
-        echo $alreadyExist;
-    } else {
-        $sql = "INSERT INTO patient (uId, lastName, firstName, middleName, dateOfBirth, ward) VALUES ('{$uId}', '{$lastName}', '{$firstName}', '{$middleName}', '{$dateOfBirth}', '{$ward}')";
-        if (mysqli_query($conn, $sql)) {
-            $saved_user = '
+    echo $alreadyExist;
+  } else {
+    $sql = "INSERT INTO patient (uId, lastName, firstName, middleName, dateOfBirth, ward) VALUES ('{$uId}', '{$lastName}', '{$firstName}', '{$middleName}', '{$dateOfBirth}', '{$ward}')";
+    if (mysqli_query($conn, $sql)) {
+      $saved_user = '
             <script>
             window.setTimeout(function() {
                 $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
@@ -59,13 +61,31 @@ if (isset($_POST['save'])) {
               Succesfully Added a new Patient!
             </div>
             ';
-            echo $saved_user;
-        } else {
-            echo "Error: " . mysqli_error($conn);
-        }
-        exit();
+      echo $saved_user;
+    } else {
+      echo "Error: " . mysqli_error($conn);
     }
+    exit();
+  }
 }
+
+//new Update
+if (isset($_GET['status'])) {
+
+  $alreadyExist = '
+        <script>
+        window.setTimeout(function() {
+            $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
+              $(this).remove(); 
+            });
+          }, 3000);
+        </script>
+        <div id="alert_message" class="alert alert-info text-center">
+          Patient Data Update Successfuly!
+        </div>
+        ';
+}
+
 // // delete comment fromd database
 // if (isset($_GET['delete'])) {
 //     $id = $_GET['id'];

@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-md-6 pl-1 mt-5">
                                 <div class="form-group">
-                                    <button type="submit" id="submit_btn" class="btn btn-info btn-fill pull-right">Update Profile</button>
+                                    <button type="submit" id="saveBtn" class="btn btn-info btn-fill pull-right">Save Patient</button>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>

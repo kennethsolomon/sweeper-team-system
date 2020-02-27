@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2020 at 07:57 AM
+-- Generation Time: Feb 27, 2020 at 09:21 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -44,6 +44,17 @@ CREATE TABLE `patient` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `patient`
+--
+
+INSERT INTO `patient` (`id`, `uId`, `lastName`, `firstName`, `middleName`, `dateOfBirth`, `date`, `createdAt`, `ward`, `breakfast`, `lunch`, `dinner`) VALUES
+(29, 'k74gqrdqyllhbq7p3ni', 'Lim', 'Kenneth', 'Lim', '1997-07-12', NULL, '2020-02-27 16:05:45.392913', 'Pedia/Surgery', '', '', ''),
+(30, 'k74gqrdqyllhbq7p3ni', 'Solomon', 'Mark', 'Lim', '1997-07-12', NULL, '2020-02-27 16:05:45.392913', 'Pedia/Surgery', '', '', ''),
+(31, 'k74gqrdqyllhbq7p3ni', 'Huenda', 'Aldrin', 'Lim', '1997-07-12', NULL, '2020-02-27 16:05:45.392913', 'Pedia/Surgery', '', '', ''),
+(32, 'k74h2tqeebrz3g4plvo', 'te', '', '', '0000-00-00', NULL, '2020-02-27 16:15:08.311929', 'General', '', '', ''),
+(33, 'k74h8zparvy5wft1xdg', 'Solomon', 'Kenneth', 'Lim', '1997-07-12', NULL, '2020-02-27 16:19:55.985122', 'OB', '', '', '');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -61,7 +72,7 @@ ALTER TABLE `patient`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  // search patient
+
   // save comment to database
   $(document).on("click", "#submit_btn", function() {
     const generatedId =

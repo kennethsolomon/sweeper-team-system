@@ -4,13 +4,13 @@ if (!$conn) {
     die('Connection failed ' . mysqli_error($conn));
 }
 
-if (isset($_POST['search'])) {
-    $inpText = $_POST['search'];
+if (isset($_POST['searchText'])) {
+    $inpText = $_POST['searchText'];
     $query = "SELECT * FROM patient WHERE lastName LIKE '%$inpText%'";
     $result = mysqli_query($conn, $query);
 
     while ($row = mysqli_fetch_assoc($result)) {
-        echo ' <a href="" id="searchList" class="list-group-item list-group-item-action border-1">' . $row['lastName'] .  ', ' . $row['firstName'] . '</a>';
+        echo ' <a href="#" id="searchList" class="list-group-item list-group-item-action border-1">' . $row['lastName'] .  ', ' . $row['firstName'] . '</a>';
     }
 }
 

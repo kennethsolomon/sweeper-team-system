@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 26, 2020 at 09:44 AM
+-- Generation Time: Feb 27, 2020 at 07:57 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -44,17 +44,6 @@ CREATE TABLE `patient` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `patient`
---
-
-INSERT INTO `patient` (`id`, `uId`, `lastName`, `firstName`, `middleName`, `dateOfBirth`, `date`, `createdAt`, `ward`, `breakfast`, `lunch`, `dinner`) VALUES
-(1, '', 'Solomon', 'Kenneth', 'Lim', '2019-06-11', '2020-02-26', '2020-02-25 15:29:49.000000', 'General', '1', '1', ''),
-(2, '', 'Lagco', 'Mark', 'Huenda', '0000-00-00', '2021-08-25', '2020-02-25 15:29:49.000000', 'General', '1', '', ''),
-(3, '', 'Lagco', 'Mark', 'Huenda', '0000-00-00', '2020-02-28', '2020-02-25 15:29:49.000000', 'General', '', '', '1'),
-(4, '', 'Solomon', 'Kenneth', 'Lim', '2019-06-11', '2020-02-26', '2020-02-25 15:29:49.000000', 'General', '1', '1', ''),
-(9, '', 'Huenda', 'Mark', 'Kenneth', '2020-02-26', NULL, '2020-02-26 16:43:11.629512', 'Rehy/ISO', '', '', '');
-
---
 -- Indexes for dumped tables
 --
 
@@ -72,7 +61,7 @@ ALTER TABLE `patient`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

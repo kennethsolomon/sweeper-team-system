@@ -45,7 +45,7 @@
                             <div class="col-md-6 pr-1">
                                 <div class="form-group">
                                     <label>Wards</label>
-                                    <select class="form-control" id="ward">
+                                    <select id="ward" class="form-control">
                                         <option value="General">General</option>
                                         <option value="Pedia/Surgery">Pedia/Surgery</option>
                                         <option value="OB">OB</option>

@@ -51,13 +51,13 @@
                         <span class="navbar-toggler-bar burger-lines"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
-                        <ul class="nav navbar-nav mr-auto">
+                        <!-- <ul class="nav navbar-nav mr-auto">
                             <li class="nav-item">
                                 <a href="#" class="nav-link" data-toggle="dropdown">
                                     <span class="d-lg-none">Dashboard</span>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
                         <!-- <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="#pablo">
@@ -81,11 +81,11 @@
                     <!-- Autocomplete -->
                     <div class="row" style="margin-left:210px">
                         <div class="col-md-12  bg-light p-4 mt-3 rounded">
-                            <h2 style="margin-left:500px">Patient Search:</h2>
+                            <h2 style="margin-left:460px">Patient Search:</h2>
 
                             <form action="server.php" class="form-inline p-3" method="post">
-                                <input type="text" name="search" id="search" class="form-control form-control-lg rounded-0 border-info" placeholder="Search..." style="width:80%">
-                                <input type="submit" name="submit" value="Search" class="btn btn-info btn-md rounded-0" stlye="width:20%">
+                                <input type="text" name="search" id="search" class="form-control form-control-lg rounded-0 border-info" placeholder="Search..." style="width:90%">
+                                <!-- <input type="submit" name="submit" value="Search" class="btn btn-info btn-md rounded-0" stlye="width:20%"> -->
                             </form>
 
                         </div>
@@ -204,33 +204,6 @@
         demo.initDashboardPageCharts();
 
         // demo.showNotification("Goodshit!");
-
-    });
-</script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("#search").keyup(function() {
-            const searchText = $(this).val();
-            if (searchText != '') {
-                $.ajax({
-                    url: 'server.php',
-                    method: 'POST',
-                    data: {
-                        searchText: searchText
-                    },
-                    success: function(response) {
-                        $("#show-list").html(response);
-                    }
-                });
-            } else {
-                $("#show-list").html('');
-            }
-        });
-        $(document).on('click', '#searchList', function() {
-            $("#search").val($(this).text());
-            $("#show-list").html('');
-        });
     });
 </script>
 

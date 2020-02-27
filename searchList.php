@@ -52,6 +52,7 @@
                 <div class="container-fluid">
 
                     <!-- Modal -->
+                    <?php include_once './modals/addSession.php' ?>
                     <?php include_once './modals/addUserModal.php' ?>
 
                     <div class="container">
@@ -81,7 +82,7 @@
                                     <div class="card-header ">
                                         <h4 class="card-title">Patient’s Subsistence Report</h4>
                                         <!-- <p class="card-category">Here is a subtitle for this table</p> -->
-                                        <button type="submit" name="updatePatientBtn" class="btn btn-info btn-fill pull-right">Add Session</button>
+                                        <button type="submit" data-toggle="modal" data-target="#sessionModal" class="btn btn-info btn-fill pull-right">Today Session</button>
                                     </div>
                                     <div class="card-body table-full-width table-responsive">
                                         <table class="table table-hover table-striped">
@@ -94,19 +95,8 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>Dakota Rice</td>
-                                                    <td>$36,738</td>
-                                                    <td>Niger</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td>Dakota Rice</td>
-                                                    <td>$36,738</td>
-                                                    <td>Niger</td>
-                                                </tr>
-
+                                                <!-- Session List -->
+                                                <?php include_once './components/sessionList.php' ?>
                                             </tbody>
                                         </table>
                                     </div>

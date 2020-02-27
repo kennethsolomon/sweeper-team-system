@@ -45,7 +45,7 @@ $(document).ready(function () {
       dateOfBirth == "" ||
       ward == ""
     ) {
-      const userALreadyExist =
+      const emptyFields =
         '<div id="alert_message" class="alert alert-danger text-center">' +
         "You need to fill all the fields!" +
         "</div>";
@@ -57,7 +57,7 @@ $(document).ready(function () {
             $(this).remove();
           });
       }, 3000);
-      $("#display_area").append(userALreadyExist);
+      $("#display_area").append(emptyFields);
     } else {
       $.ajax({
         url: "server.php",

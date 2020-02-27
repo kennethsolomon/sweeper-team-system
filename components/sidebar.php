@@ -24,7 +24,7 @@
                         </a>
                     </li> -->
             <li>
-                <a data-toggle="modal" data-target="#myModal1" class="nav-link" href="./user.html">
+                <a data-toggle="modal" data-target="#addUserModal" class="nav-link" href="./user.html">
                     <i class="nc-icon nc-circle-09"></i>
                     <p>Add User</p>
                 </a>

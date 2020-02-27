@@ -1,10 +1,10 @@
 <!-- Mini Modal -->
-<div class="modal fade modal modal-primary" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade modal modal-primary" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header justify-content-center">
                 <div class="modal-profile">
-                    <i class="nc-icon nc-bulb-63"></i>
+                    <i class="nc-icon nc-circle-09"></i>
                 </div>
             </div>
             <div class="modal-body text-center">

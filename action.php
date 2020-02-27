@@ -76,3 +76,22 @@ if (isset($_POST['updatePatientBtn'])) {
     }
     exit();
 }
+
+//================================ Search List ================================
+// Save
+//Save Patient Info
+if (isset($_POST['addSessionBtn'])) {
+    $pId = $_POST['pId'];
+    $Breakfast = $_POST['Breakfast'];
+    $Lunch = $_POST['Lunch'];
+    $Dinner = $_POST['Dinner'];
+    $sessionDate = $_POST['sessionDate'];
+
+    $sql = "INSERT INTO patientSubsistence (pId, breakfast, lunch, dinner, date) VALUES ('$pId', '$Breakfast', '$Lunch', '$Dinner', '$sessionDate')";
+    if (mysqli_query($conn, $sql)) {
+        header('Location: searchList.php?uId=' . $pId . '');
+    } else {
+        echo "Error: " . mysqli_error($conn);
+    }
+    exit();
+}

@@ -45,27 +45,27 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><?php echo $_GET['name'] ?></td>
-                                <?php
+                                <th><?php echo $_GET['name'] ?></td>
+                                    <?php
 
-                                $month = $_GET['month'];
-                                $year = $_GET['year'];
+                                    $month = $_GET['month'];
+                                    $year = $_GET['year'];
 
-                                $pId = $_GET['pId'];
-                                $sqlName = "SELECT * FROM patientsubsistence where pId = '$pId' ) ";
-                                $resultName = mysqli_query($conn, $sqlName);
+                                    $pId = $_GET['pId'];
+                                    $sqlName = "SELECT * FROM patientsubsistence where pId = '$pId' AND SUBSTRING(date, 6,7) = $month and SUBSTRING(date, 1, 4) = $year";
+                                    $resultName = mysqli_query($conn, $sqlName);
 
-                                if (mysqli_num_rows($resultName) > 0) {
-                                    while ($rowName = mysqli_fetch_assoc($resultName)) {
-                                        $date = $rowName['date'];
-                                        echo '
+                                    if (mysqli_num_rows($resultName) > 0) {
+                                        while ($rowName = mysqli_fetch_assoc($resultName)) {
+                                            $date = $rowName['date'];
+                                            echo '
                                         <td>' . $date . '</td>
                                
                                         ';
+                                        }
                                     }
-                                }
 
-                                ?>
+                                    ?>
 
                             </tr>
                         </tbody>

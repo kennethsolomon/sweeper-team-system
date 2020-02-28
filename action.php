@@ -78,8 +78,7 @@ if (isset($_POST['updatePatientBtn'])) {
 }
 
 //================================ Search List ================================
-// Save
-//Save Patient Info
+// Add Session
 if (isset($_POST['addSessionBtn'])) {
     $pId = $_POST['pId'];
     $Breakfast = $_POST['Breakfast'];
@@ -92,7 +91,6 @@ if (isset($_POST['addSessionBtn'])) {
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
-
         $sql2 = "UPDATE patientsubsistence SET 
         breakfast='{$Breakfast}', 
         lunch='{$Lunch}', 

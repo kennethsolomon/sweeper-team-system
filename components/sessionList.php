@@ -2,7 +2,7 @@
 
 //View Patient Info
 $pId = $_GET['uId'];
-$query = "SELECT * FROM patientSubsistence WHERE pId = '$pId' ORDER BY date DESC";
+$query = "SELECT * FROM patientsubsistence WHERE pId = '$pId' ORDER BY date DESC";
 $result = mysqli_query($conn, $query);
 if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {

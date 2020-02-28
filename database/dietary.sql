@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2020 at 02:59 AM
+-- Generation Time: Feb 28, 2020 at 10:01 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -44,27 +44,7 @@ CREATE TABLE `patient` (
 --
 
 INSERT INTO `patient` (`id`, `uId`, `lastName`, `firstName`, `middleName`, `dateOfBirth`, `createdAt`, `ward`) VALUES
-(29, 'k74gqrdqyllhbq7p3ni', 'Lim', 'Kenneth', 'Lim', '1997-07-12', '2020-02-27 16:05:45.392913', 'Pedia/Surgery'),
-(30, 'k74gqrdqyllhbq7p3ni', 'Solomon', 'Mark', 'Lim', '1997-07-12', '2020-02-27 16:05:45.392913', 'Pedia/Surgery'),
-(31, 'k74gqrdqyllhbq7p3ni', 'Huenda', 'Aldrin', 'Lim', '1997-07-12', '2020-02-27 16:05:45.392913', 'Pedia/Surgery'),
-(32, 'k74h2tqeebrz3g4plvo', 'te', '2', '2', '2020-02-06', '2020-02-27 16:15:08.311929', 'General'),
-(33, 'k74h8zparvy5wft1xdg', '', '', '', '1997-07-12', '2020-02-27 16:19:55.985122', 'General'),
-(34, 'k74hzt68j8iv4ola68', 'test', 'test', 'test', '0000-00-00', '2020-02-27 16:40:47.224760', 'General'),
-(35, 'k74ibsdi6mzobuhfdmy', 'Solomon2', 'Kenneth', 'Lim', '1998-07-12', '2020-02-27 16:50:06.070600', 'General'),
-(37, 'k74iep53z1i0rb14pf9', '', '', '', '0000-00-00', '2020-02-27 16:52:21.846632', 'General'),
-(38, 'k74ikkw1yqfnh1lwo4', '', '', '', '0000-00-00', '2020-02-27 16:56:56.275398', 'General'),
-(39, 'k74im43sessem0zbnbl', 'a', '', '', '0000-00-00', '2020-02-27 16:58:07.832012', ''),
-(40, 'k74it85lguk1oent8kg', 'ssssss', '', '', '0000-00-00', '2020-02-27 17:03:39.674843', 'General'),
-(41, 'k74j7akxe0g0163ien', 'ss', 's', 's', '0023-12-31', '2020-02-27 17:14:36.005045', 'General'),
-(42, 'k74j7tjn97mtuwhcfj8', '', 's', 's', '0123-12-31', '2020-02-27 17:15:00.584783', 'General'),
-(43, 'k74j7ydln5bqio2k80h', 'qwe', 'qwe', 'ewq', '0023-12-31', '2020-02-27 17:15:06.843602', ''),
-(44, 'k74j8n4xtit2bxg6r0h', 'Solomon2', 'Kenneth2', 'my update2', '2020-02-26', '2020-02-27 17:15:38.934596', 'General'),
-(45, 'k74j8w96x34oxk6a89f', '', '', '', '0132-12-31', '2020-02-27 17:15:50.747571', 'General'),
-(46, 'k74j9hwxkn8eh92i95g', '', '', '', '0023-12-31', '2020-02-27 17:16:18.819210', 'General'),
-(47, 'k74uusr5vtdevk6dg3d', 'test', 'test2', 'test', '2020-02-20', '2020-02-27 22:40:48.415193', 'General'),
-(48, 'k74uv2t83icnk210klz', 'Solomon', 'Kenneth', '123', '2020-02-19', '2020-02-27 22:41:01.451001', 'General'),
-(49, 'k74uwm2uapc9y39d2u7', 'Solomon', 'Kenneth', '2', '2020-02-20', '2020-02-27 22:42:13.075251', 'General'),
-(50, 'k74uwyul8w4fmzi8v0e', 'Solomon', 'Kenneth2', 's', '2020-02-12', '2020-02-27 22:42:29.622490', 'General');
+(51, 'k75j52f63675bsbjxsh', 'Solomon', 'Kenneth', 'Lim', '1997-07-12', '2020-02-28 10:00:38.292321', 'General');
 
 -- --------------------------------------------------------
 
@@ -75,20 +55,55 @@ INSERT INTO `patient` (`id`, `uId`, `lastName`, `firstName`, `middleName`, `date
 CREATE TABLE `patientsubsistence` (
   `id` int(12) NOT NULL,
   `pId` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date` date DEFAULT NULL,
+  `month` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `year` varchar(12) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `date` date NOT NULL,
   `breakfast` varchar(225) COLLATE utf8mb4_unicode_ci NOT NULL,
   `lunch` varchar(225) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `dinner` varchar(225) COLLATE utf8mb4_unicode_ci NOT NULL
+  `dinner` varchar(225) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `1` date DEFAULT NULL,
+  `2` date DEFAULT NULL,
+  `3` date DEFAULT NULL,
+  `4` date DEFAULT NULL,
+  `5` date DEFAULT NULL,
+  `6` date DEFAULT NULL,
+  `7` date DEFAULT NULL,
+  `8` date DEFAULT NULL,
+  `9` date DEFAULT NULL,
+  `10` date DEFAULT NULL,
+  `11` date DEFAULT NULL,
+  `12` date DEFAULT NULL,
+  `13` date DEFAULT NULL,
+  `14` date DEFAULT NULL,
+  `15` date DEFAULT NULL,
+  `16` date DEFAULT NULL,
+  `17` date DEFAULT NULL,
+  `18` date DEFAULT NULL,
+  `19` date DEFAULT NULL,
+  `20` date DEFAULT NULL,
+  `21` date DEFAULT NULL,
+  `22` date DEFAULT NULL,
+  `23` date DEFAULT NULL,
+  `24` date DEFAULT NULL,
+  `25` date DEFAULT NULL,
+  `26` date DEFAULT NULL,
+  `27` date DEFAULT NULL,
+  `28` date DEFAULT NULL,
+  `29` date DEFAULT NULL,
+  `30` date DEFAULT NULL,
+  `31` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `patientsubsistence`
 --
 
-INSERT INTO `patientsubsistence` (`id`, `pId`, `date`, `breakfast`, `lunch`, `dinner`) VALUES
-(14, 'k74uusr5vtdevk6dg3d', '2020-02-28', 'on', 'on', 'on'),
-(15, 'k74uusr5vtdevk6dg3d', '2020-02-29', 'on', 'on', ''),
-(16, 'k74uusr5vtdevk6dg3d', '2020-03-01', 'on', '', '');
+INSERT INTO `patientsubsistence` (`id`, `pId`, `month`, `year`, `date`, `breakfast`, `lunch`, `dinner`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20`, `21`, `22`, `23`, `24`, `25`, `26`, `27`, `28`, `29`, `30`, `31`) VALUES
+(21, 'k75j52f63675bsbjxsh', '', '', '2020-02-28', 'on', 'on', 'on', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(22, 'k75j52f63675bsbjxsh', '', '', '2020-02-29', 'on', 'on', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(23, 'k75j52f63675bsbjxsh', '', '', '2020-02-27', '', 'on', 'on', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(24, 'k75j52f63675bsbjxsh', '', '', '2020-03-28', 'on', 'on', 'on', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(25, 'k75j52f63675bsbjxsh', '', '', '2020-01-28', 'on', 'on', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -114,13 +129,13 @@ ALTER TABLE `patientsubsistence`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT for table `patientsubsistence`
 --
 ALTER TABLE `patientsubsistence`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

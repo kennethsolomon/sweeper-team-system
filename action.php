@@ -87,6 +87,7 @@ if (isset($_POST['addSessionBtn'])) {
     $Dinner = $_POST['Dinner'];
     $sessionDate = $_POST['sessionDate'];
 
+
     $sql = "SELECT * FROM patientsubsistence WHERE date='$sessionDate'";
     $result = mysqli_query($conn, $sql);
 

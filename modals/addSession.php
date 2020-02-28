@@ -45,7 +45,7 @@
 
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <button type="submit" id="addSessionBtn" name="addSessionBtn" class="btn btn-info btn-fill ">Add Session</button>
+                                    <button type="submit" id="addSessionBtn" name="addSessionBtn" class="btn btn-info btn-fill ">Update Session</button>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>

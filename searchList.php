@@ -43,7 +43,40 @@
             </nav>
             <!-- End Navbar -->
 
-            <?php echo $alreadyExist; ?>
+            <?php
+            //new Update
+            if (isset($_GET['status'])) {
+                $alreadyExist = '
+                <script>
+                    window.setTimeout(function() {
+                        $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
+                            $(this).remove(); 
+                        });
+                        }, 3000);
+                </script>
+                <div id="alert_message" class="alert alert-info text-center">
+                    Patient Data Update Successfuly!
+                </div>
+                ';
+                echo $alreadyExist;
+            }
+
+            if (isset($_GET['addSession'])) {
+                $addSessionSuccessfully = '
+                <script>
+                window.setTimeout(function() {
+                    $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
+                        $(this).remove(); 
+                    });
+                    }, 3000);
+                </script>
+                <div id="alert_message" class="alert alert-info text-center">
+                    Session Addedd Successfully!
+                </div>
+                ';
+                echo $addSessionSuccessfully;
+            }
+            ?>
 
             <!-- Display Area -->
             <div id="display_area"></div>
@@ -66,7 +99,7 @@
                                         <!-- Patient Info -->
                                         <?php
 
-                                        include_once 'components/patientInfo.php'
+                                        include_once 'components/patientInfo.php';
                                         ?>
 
                                     </div>
@@ -103,14 +136,11 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
+                <?php include_once './components/footer.php' ?>
             </div>
-            <?php include_once './components/footer.php' ?>
         </div>
-    </div>
 
 </body>
 <!--   Core JS Files   -->

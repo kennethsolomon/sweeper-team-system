@@ -69,22 +69,7 @@ if (isset($_POST['save'])) {
   }
 }
 
-//new Update
-if (isset($_GET['status'])) {
 
-  $alreadyExist = '
-        <script>
-        window.setTimeout(function() {
-            $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
-              $(this).remove(); 
-            });
-          }, 3000);
-        </script>
-        <div id="alert_message" class="alert alert-info text-center">
-          Patient Data Update Successfuly!
-        </div>
-        ';
-}
 
 // // delete comment fromd database
 // if (isset($_GET['delete'])) {

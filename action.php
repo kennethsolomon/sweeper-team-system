@@ -24,23 +24,23 @@ if (isset($_POST['updatePatientBtn'])) {
       <div class="card-body" id="patientInfo">
         <form method="post">
             <div class="row">
-                <input type="hidden" class="form-control" name="pId" id="pId" value="' . $row['uId'] . '">
+                <input type="hidden" class="form-control" name="pId" id="pId" value="' . $pId . '">
                     <div class="col-md-4 pr-1">
                         <div class="form-group">
                             <label>Last Name</label>
-                            <input type="text" class="form-control" placeholder="Last Name" name="lastName" id="lastName" value="' . $row['lastName'] . '">
+                            <input type="text" class="form-control" placeholder="Last Name" name="lastName" id="lastName" value="' . $lastName . '">
                         </div>
                     </div>
                     <div class="col-md-4 px-1">
                         <div class="form-group">
                             <label>First Name</label>
-                            <input type="text" class="form-control" placeholder="First Name" name="firstName" id="firstName" value="' . $row['firstName'] . '">
+                            <input type="text" class="form-control" placeholder="First Name" name="firstName" id="firstName" value="' . $firstName . '">
                         </div>
                     </div>
                     <div class="col-md-4 pl-1">
                         <div class="form-group">
                             <label>Middle Name</label>
-                            <input type="text" class="form-control" placeholder="Middle Name" name="middleName" id="middleName" value="' . $row['middleName'] . '">
+                            <input type="text" class="form-control" placeholder="Middle Name" name="middleName" id="middleName" value="' . $middleName . '">
                         </div>
                     </div>
                 </div>
@@ -48,14 +48,14 @@ if (isset($_POST['updatePatientBtn'])) {
                     <div class="col-md-6 pr-1">
                         <div class="form-group">
                             <label>Date of Birth</label>
-                            <input type="date" class="form-control" placeholder="Date of Birth" name="dateOfBirth" id="dateOfBirth" value="' . $row['dateOfBirth'] . '">
+                            <input type="date" class="form-control" placeholder="Date of Birth" name="dateOfBirth" id="dateOfBirth" value="' . $dateOfBirth . '">
                         </div>
                     </div>
                     <div class="col-md-6 pl-1">
                         <div class="form-group">
                             <label>Ward</label>
                             <select id="ward" name="ward" class="form-control">
-                                <option value="' . $row['ward'] . '">' . $row['ward'] . '</option>
+                                <option value="' . $ward . '">' . $ward . '</option>
                                 <option value="General">General</option>
                                 <option value="Pedia/Surgery">Pedia/Surgery</option>
                                 <option value="OB">OB</option>
@@ -87,11 +87,26 @@ if (isset($_POST['addSessionBtn'])) {
     $Dinner = $_POST['Dinner'];
     $sessionDate = $_POST['sessionDate'];
 
-    $sql = "INSERT INTO patientSubsistence (pId, breakfast, lunch, dinner, date) VALUES ('$pId', '$Breakfast', '$Lunch', '$Dinner', '$sessionDate')";
-    if (mysqli_query($conn, $sql)) {
-        header('Location: searchList.php?uId=' . $pId . '');
+    $sql = "SELECT * FROM patientsubsistence WHERE date='$sessionDate'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+
+        $sql2 = "UPDATE patientsubsistence SET 
+        breakfast='{$Breakfast}', 
+        lunch='{$Lunch}', 
+        dinner='{$Dinner}'
+        WHERE date='$sessionDate'";
+        if (mysqli_query($conn, $sql2)) {
+            header('Location: searchList.php?uId=' . $pId . '&addSession=1');
+        }
     } else {
-        echo "Error: " . mysqli_error($conn);
+        $sql = "INSERT INTO patientSubsistence (pId, breakfast, lunch, dinner, date) VALUES ('$pId', '$Breakfast', '$Lunch', '$Dinner', '$sessionDate')";
+        if (mysqli_query($conn, $sql)) {
+            header('Location: searchList.php?uId=' . $pId . '');
+        } else {
+            echo "Error: " . mysqli_error($conn);
+        }
+        exit();
     }
-    exit();
 }

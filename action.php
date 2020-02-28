@@ -110,3 +110,35 @@ if (isset($_POST['addSessionBtn'])) {
         exit();
     }
 }
+
+//Generate Reports Btn
+// if (isset($_POST['generateReportBtn'])) {
+//     $pId = $_POST['pId'];
+//     $Breakfast = $_POST['Breakfast'];
+//     $Lunch = $_POST['Lunch'];
+//     $Dinner = $_POST['Dinner'];
+//     $sessionDate = $_POST['sessionDate'];
+
+//     $sql = "SELECT * FROM patientsubsistence WHERE date='$sessionDate'";
+//     $result = mysqli_query($conn, $sql);
+
+//     if (mysqli_num_rows($result) > 0) {
+
+//         $sql2 = "UPDATE patientsubsistence SET 
+//         breakfast='{$Breakfast}', 
+//         lunch='{$Lunch}', 
+//         dinner='{$Dinner}'
+//         WHERE date='$sessionDate'";
+//         if (mysqli_query($conn, $sql2)) {
+//             header('Location: searchList.php?uId=' . $pId . '&addSession=1');
+//         }
+//     } else {
+//         $sql = "INSERT INTO patientSubsistence (pId, breakfast, lunch, dinner, date) VALUES ('$pId', '$Breakfast', '$Lunch', '$Dinner', '$sessionDate')";
+//         if (mysqli_query($conn, $sql)) {
+//             header('Location: searchList.php?uId=' . $pId . '');
+//         } else {
+//             echo "Error: " . mysqli_error($conn);
+//         }
+//         exit();
+//     }
+// }

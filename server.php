@@ -12,7 +12,7 @@ if (isset($_POST['searchText'])) {
 
   if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-      echo ' <a href="searchList.php?uId=' . $row['uId'] . '" id="searchList" class="list-group-item list-group-item-action border-1">' . $row['lastName'] .  ', ' . $row['firstName'] . '</a>';
+      echo ' <a href="searchList.php?uId=' . $row['uId'] . '" id="searchList" class="list-group-item list-group-item-action border-1">' . $row['lastName'] .  ', ' . $row['firstName'] . ' ' . $row['middleName'] . ' | Birthdate: ' . $row['dateOfBirth'] . '</a>';
     }
   } else {
     echo ' <a href="#" class="list-group-item list-group-item-action border-1">No Result</a>';

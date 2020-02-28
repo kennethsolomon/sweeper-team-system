@@ -87,8 +87,15 @@
                     <!-- Modal -->
                     <?php include_once './modals/addSession.php' ?>
                     <?php include_once './modals/addUserModal.php' ?>
+                    <?php include_once './modals/generateReports.php' ?>
 
                     <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="submit" name="generateReportBtn" data-toggle="modal" data-target="#generateReportsModal" class="btn btn-success btn-fill pull-right mb-2">Generate Report</button>
+                            </div>
+                        </div>
 
                         <div class="row">
                             <div class="col-md-12 ">
@@ -136,6 +143,8 @@
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
                 <?php include_once './components/footer.php' ?>

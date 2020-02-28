@@ -37,35 +37,39 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th scope="col">Name</th>
                                 <th scope="col">1</th>
                                 <th scope="col">2</th>
                                 <th scope="col">3</th>
+                                <th scope="col">28</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th><?php echo $_GET['name'] ?></td>
-                                    <?php
+                                <?php
 
-                                    $month = $_GET['month'];
-                                    $year = $_GET['year'];
+                                $month = $_GET['month'];
+                                $year = $_GET['year'];
 
-                                    $pId = $_GET['pId'];
-                                    $sqlName = "SELECT * FROM patientsubsistence where pId = '$pId' AND SUBSTRING(date, 6,7) = $month and SUBSTRING(date, 1, 4) = $year";
-                                    $resultName = mysqli_query($conn, $sqlName);
+                                $pId = $_GET['pId'];
+                                $sqlName = "SELECT * FROM patientsubsistence where pId = '$pId' AND SUBSTRING(date, 6,7) = $month and SUBSTRING(date, 1, 4) = $year";
+                                $resultName = mysqli_query($conn, $sqlName);
 
-                                    if (mysqli_num_rows($resultName) > 0) {
-                                        while ($rowName = mysqli_fetch_assoc($resultName)) {
-                                            $date = $rowName['date'];
-                                            echo '
-                                        <td>' . $date . '</td>
-                               
-                                        ';
-                                        }
+                                if (mysqli_num_rows($resultName) > 0) {
+                                    while ($rowName = mysqli_fetch_assoc($resultName)) {
+                                        $day1 = $rowName['day1'];
+                                        $day2 = $rowName['day2'];
+                                        $day3 = $rowName['day3'];
+                                        $day28 = $rowName['day28'];
+                                        echo '
+                                            <td>' . $day1 . '</td>
+                                            <td>' . $day2 . '</td>
+                                            <td>' . $day3 . '</td>
+                                            <td>' . $day28 . '</td>
+                                            ';
                                     }
+                                }
 
-                                    ?>
+                                ?>
 
                             </tr>
                         </tbody>

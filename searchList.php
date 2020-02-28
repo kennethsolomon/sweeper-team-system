@@ -123,6 +123,7 @@
                                         <h4 class="card-title">Patient’s Subsistence Report</h4>
                                         <!-- <p class="card-category">Here is a subtitle for this table</p> -->
                                         <button type="submit" data-toggle="modal" data-target="#sessionModal" class="btn btn-info btn-fill pull-right">Today Session</button>
+                                        <a href="action.php?updateSession=1" type="submit" name="updateSession" class="btn btn-info btn-fill pull-right mr-2">Update</a>
                                     </div>
                                     <div class="card-body table-full-width table-responsive">
                                         <table class="table table-hover table-striped">

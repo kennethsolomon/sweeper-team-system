@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 29, 2020 at 11:11 AM
+-- Generation Time: Feb 29, 2020 at 11:30 AM
 -- Server version: 10.4.12-MariaDB
 -- PHP Version: 7.4.2
 
@@ -44,8 +44,7 @@ CREATE TABLE `patient` (
 --
 
 INSERT INTO `patient` (`id`, `uId`, `lastName`, `firstName`, `middleName`, `dateOfBirth`, `createdAt`, `ward`) VALUES
-(51, 'k75j52f63675bsbjxsh', 'Solomon', 'Kenneth', 'Lim', '1997-07-12', '2020-02-28 10:00:38.292321', 'General'),
-(53, 'k76xpkcxwm97n8ms61', 'Huenda', 'Aldrin Ray', 'Borja', '1997-07-13', '2020-02-29 09:36:15.463853', 'OB');
+(54, 'k77iunnlbxih271e95f', 'Solomon', 'Kenneth', 'Lim', '1997-07-12', '2020-02-29 19:28:04.935123', 'General');
 
 -- --------------------------------------------------------
 
@@ -69,7 +68,8 @@ CREATE TABLE `patientsubsistence` (
 --
 
 INSERT INTO `patientsubsistence` (`id`, `pId`, `month`, `year`, `date`, `breakfast`, `lunch`, `dinner`) VALUES
-(83, 'k76xpkcxwm97n8ms61', NULL, NULL, '2020-02-29', 'on', 'on', '');
+(86, 'k77iunnlbxih271e95f', NULL, NULL, '2020-02-29', '', 'on', 'on'),
+(87, 'k77iunnlbxih271e95f', NULL, NULL, '2020-02-28', 'on', 'on', 'on');
 
 -- --------------------------------------------------------
 
@@ -80,6 +80,9 @@ INSERT INTO `patientsubsistence` (`id`, `pId`, `month`, `year`, `date`, `breakfa
 CREATE TABLE `reports` (
   `id` int(12) NOT NULL,
   `pId` varchar(25) NOT NULL,
+  `lastName` varchar(255) NOT NULL,
+  `firstName` varchar(255) NOT NULL,
+  `middleName` varchar(255) NOT NULL,
   `date` date NOT NULL,
   `day01` varchar(255) DEFAULT NULL,
   `day02` varchar(255) DEFAULT NULL,
@@ -118,8 +121,8 @@ CREATE TABLE `reports` (
 -- Dumping data for table `reports`
 --
 
-INSERT INTO `reports` (`id`, `pId`, `date`, `day01`, `day02`, `day03`, `day04`, `day05`, `day06`, `day07`, `day08`, `day09`, `day10`, `day11`, `day12`, `day13`, `day14`, `day15`, `day16`, `day17`, `day18`, `day19`, `day20`, `day21`, `day22`, `day23`, `day24`, `day25`, `day26`, `day27`, `day28`, `day29`, `day30`, `day31`) VALUES
-(57, 'k76xpkcxwm97n8ms61', '2020-02-29', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'bl', NULL, NULL);
+INSERT INTO `reports` (`id`, `pId`, `lastName`, `firstName`, `middleName`, `date`, `day01`, `day02`, `day03`, `day04`, `day05`, `day06`, `day07`, `day08`, `day09`, `day10`, `day11`, `day12`, `day13`, `day14`, `day15`, `day16`, `day17`, `day18`, `day19`, `day20`, `day21`, `day22`, `day23`, `day24`, `day25`, `day26`, `day27`, `day28`, `day29`, `day30`, `day31`) VALUES
+(58, 'k77iunnlbxih271e95f', 'Solomon', 'Kenneth', 'Lim', '2020-02-29', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'bld', 'dl', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -151,19 +154,19 @@ ALTER TABLE `reports`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `patientsubsistence`
 --
 ALTER TABLE `patientsubsistence`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

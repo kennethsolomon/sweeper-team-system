@@ -18,20 +18,32 @@
                                 <div class="col-md-4 pl-1">
                                     <div class="form-group">
                                         <input name="pId" id="pId" type="hidden" class="form-group-input" value="<?php echo $_GET['uId'] ?>">
-                                        <input name="Breakfast" id="Breakfast" type="checkbox" class="form-group-input" id="Breakfast">
+                                        <input name="Breakfast" id="Breakfast" type="checkbox" class="form-group-input">
                                         <label class="form-control" for="Breakfast">Breakfast</label>
                                     </div>
                                 </div>
                                 <div class="col-md-4 pl-1">
                                     <div class="form-group">
-                                        <input name="Lunch" id="Lunch" type="checkbox" class="form-group-input" id="Lunch">
+                                        <input name="Lunch" id="Lunch" type="checkbox" class="form-group-input">
                                         <label class="form-control" for="Lunch">Lunch</label>
                                     </div>
                                 </div>
                                 <div class="col-md-4 pl-1">
                                     <div class="form-group">
-                                        <input name="Dinner" id="Dinner" type="checkbox" class="form-group-input" id="Dinner">
+                                        <input name="Dinner" id="Dinner" type="checkbox" class="form-group-input">
                                         <label class="form-control" for="Dinner">Dinner</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pl-1">
+                                    <div class="form-group">
+                                        <input name="Npo" id="Npo" type="checkbox" class="form-group-input">
+                                        <label class="form-control" for="Npo">NPO</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pl-1">
+                                    <div class="form-group">
+                                        <input name="Gl" id="Gl" type="checkbox" class="form-group-input">
+                                        <label class="form-control" for="Gl">GL</label>
                                     </div>
                                 </div>
                             </div>

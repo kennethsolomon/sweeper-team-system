@@ -123,6 +123,8 @@ if (isset($_POST['addSessionBtn'])) {
     $Breakfast = $_POST['Breakfast'];
     $Lunch = $_POST['Lunch'];
     $Dinner = $_POST['Dinner'];
+    $Npo = $_POST['Npo'];
+    $Gl = $_POST['Gl'];
     $sessionDate = $_POST['sessionDate'];
     $todayDate = substr($sessionDate, 8, 2);
     $monthAndYear = substr($sessionDate, 0, 7);
@@ -136,14 +138,17 @@ if (isset($_POST['addSessionBtn'])) {
             $breakfast = $row['breakfast'];
             $lunch = $row['lunch'];
             $dinner = $row['dinner'];
-
+            $npo = $row['npo'];
+            $gl = $row['gl'];
             if ($breakfast == 'on' && $lunch == 'on' && $dinner == 'on') {
                 switch ($todayDate) {
                     case '01':
                         $sql2 = "UPDATE patientsubsistence SET 
                             breakfast='{$Breakfast}', 
                             lunch='{$Lunch}', 
-                            dinner='{$Dinner}'
+                            dinner='{$Dinner}',
+                            npo='{$Npo}',
+                            gl='{$Gl}'
                             WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -153,7 +158,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                             breakfast='{$Breakfast}', 
                             lunch='{$Lunch}', 
-                            dinner='{$Dinner}'
+                            dinner='{$Dinner}',
+                            npo='{$Npo}',
+                            gl='{$Gl}'
                             WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -163,7 +170,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -173,7 +182,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -183,7 +194,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -193,7 +206,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -203,7 +218,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -213,7 +230,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -223,7 +242,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -233,7 +254,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -243,7 +266,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -253,7 +278,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -263,7 +290,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -273,7 +302,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -283,7 +314,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -293,7 +326,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -303,7 +338,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -313,7 +350,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -323,7 +362,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                     breakfast='{$Breakfast}', 
                                     lunch='{$Lunch}', 
-                                    dinner='{$Dinner}'
+                                    dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                     WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -333,7 +374,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -343,7 +386,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -353,7 +398,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -363,7 +410,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -373,7 +422,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -383,7 +434,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -393,7 +446,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -403,7 +458,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -413,7 +470,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -423,7 +482,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -433,7 +494,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -443,7 +506,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -458,7 +523,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                             breakfast='{$Breakfast}', 
                             lunch='{$Lunch}', 
-                            dinner='{$Dinner}'
+                            dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                             WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -468,7 +535,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                             breakfast='{$Breakfast}', 
                             lunch='{$Lunch}', 
-                            dinner='{$Dinner}'
+                            dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                             WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -478,7 +547,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -488,7 +559,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -498,7 +571,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -508,7 +583,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -518,7 +595,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -528,7 +607,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -538,7 +619,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -548,7 +631,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -558,7 +643,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -568,7 +655,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -578,7 +667,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -588,7 +679,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -598,7 +691,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -608,7 +703,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -618,7 +715,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -628,7 +727,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -638,7 +739,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                     breakfast='{$Breakfast}', 
                                     lunch='{$Lunch}', 
-                                    dinner='{$Dinner}'
+                                    dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                     WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -648,7 +751,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -658,7 +763,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -668,7 +775,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -678,7 +787,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -688,7 +799,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -698,7 +811,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -708,7 +823,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -718,7 +835,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -728,7 +847,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -738,7 +859,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -748,7 +871,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -758,7 +883,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -773,7 +900,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                             breakfast='{$Breakfast}', 
                             lunch='{$Lunch}', 
-                            dinner='{$Dinner}'
+                            dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                             WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -783,7 +912,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                             breakfast='{$Breakfast}', 
                             lunch='{$Lunch}', 
-                            dinner='{$Dinner}'
+                            dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                             WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -793,7 +924,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -803,7 +936,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -813,7 +948,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -823,7 +960,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -833,7 +972,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -843,7 +984,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -853,7 +996,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -863,7 +1008,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -873,7 +1020,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -883,7 +1032,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -893,7 +1044,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -903,7 +1056,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -913,7 +1068,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -923,7 +1080,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -933,7 +1092,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -943,7 +1104,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -953,7 +1116,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                     breakfast='{$Breakfast}', 
                                     lunch='{$Lunch}', 
-                                    dinner='{$Dinner}'
+                                    dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                     WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -963,7 +1128,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -973,7 +1140,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -983,7 +1152,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -993,7 +1164,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1003,7 +1176,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1013,7 +1188,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1023,7 +1200,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1033,7 +1212,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1043,7 +1224,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1053,7 +1236,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1063,7 +1248,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1073,7 +1260,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1088,7 +1277,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                             breakfast='{$Breakfast}', 
                             lunch='{$Lunch}', 
-                            dinner='{$Dinner}'
+                            dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                             WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1098,7 +1289,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                             breakfast='{$Breakfast}', 
                             lunch='{$Lunch}', 
-                            dinner='{$Dinner}'
+                            dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                             WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1108,7 +1301,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1118,7 +1313,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1128,7 +1325,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1138,7 +1337,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1148,7 +1349,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1158,7 +1361,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1168,7 +1373,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1178,7 +1385,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1188,7 +1397,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1198,7 +1409,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1208,7 +1421,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1218,7 +1433,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1228,7 +1445,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1238,7 +1457,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1248,7 +1469,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1258,7 +1481,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1268,7 +1493,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                     breakfast='{$Breakfast}', 
                                     lunch='{$Lunch}', 
-                                    dinner='{$Dinner}'
+                                    dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                     WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1278,7 +1505,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1288,7 +1517,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1298,7 +1529,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1308,7 +1541,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1318,7 +1553,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1328,7 +1565,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1338,7 +1577,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1348,7 +1589,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1358,7 +1601,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1368,7 +1613,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1378,7 +1625,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1388,7 +1637,763 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    default:
+                        echo "Something went wrong!";
+                }
+            } else if ($npo == 'on') {
+                switch ($todayDate) {
+                    case '01':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                            breakfast='{$Breakfast}', 
+                            lunch='{$Lunch}', 
+                            dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                            WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '02':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                            breakfast='{$Breakfast}', 
+                            lunch='{$Lunch}', 
+                            dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                            WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '03':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '04':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '05':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '06':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '07':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '08':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '09':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '10':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '11':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '12':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '13':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '14':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '15':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '16':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '17':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '18':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '19':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                    breakfast='{$Breakfast}', 
+                                    lunch='{$Lunch}', 
+                                    dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                    WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '20':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '21':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '22':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '23':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '24':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '25':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '26':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '27':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '28':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '29':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '30':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '31':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    default:
+                        echo "Something went wrong!";
+                }
+            } else if ($gl == 'on') {
+                switch ($todayDate) {
+                    case '01':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                            breakfast='{$Breakfast}', 
+                            lunch='{$Lunch}', 
+                            dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                            WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '02':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                            breakfast='{$Breakfast}', 
+                            lunch='{$Lunch}', 
+                            dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                            WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '03':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '04':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '05':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '06':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '07':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '08':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '09':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '10':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '11':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '12':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '13':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '14':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '15':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '16':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '17':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '18':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '19':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                    breakfast='{$Breakfast}', 
+                                    lunch='{$Lunch}', 
+                                    dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                    WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '20':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '21':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '22':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '23':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '24':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '25':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '26':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '27':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '28':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '29':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '30':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
+                                WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    case '31':
+                        $sql2 = "UPDATE patientsubsistence SET 
+                                breakfast='{$Breakfast}', 
+                                lunch='{$Lunch}', 
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1403,7 +2408,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                             breakfast='{$Breakfast}', 
                             lunch='{$Lunch}', 
-                            dinner='{$Dinner}'
+                            dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                             WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1413,7 +2420,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                             breakfast='{$Breakfast}', 
                             lunch='{$Lunch}', 
-                            dinner='{$Dinner}'
+                            dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                             WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1423,7 +2432,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1433,7 +2444,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1443,7 +2456,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1453,7 +2468,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1463,7 +2480,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1473,7 +2492,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1483,7 +2504,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1493,7 +2516,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1503,7 +2528,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1513,7 +2540,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1523,7 +2552,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1533,7 +2564,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1543,7 +2576,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1553,7 +2588,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1563,7 +2600,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1573,7 +2612,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1583,7 +2624,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                     breakfast='{$Breakfast}', 
                                     lunch='{$Lunch}', 
-                                    dinner='{$Dinner}'
+                                    dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                     WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1593,7 +2636,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1603,7 +2648,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1613,7 +2660,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1623,7 +2672,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1633,7 +2684,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1643,7 +2696,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1653,7 +2708,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1663,7 +2720,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1673,7 +2732,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1683,7 +2744,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1693,7 +2756,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1703,7 +2768,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $sql2 = "UPDATE patientsubsistence SET 
                                 breakfast='{$Breakfast}', 
                                 lunch='{$Lunch}', 
-                                dinner='{$Dinner}'
+                                dinner='{$Dinner}',
+                                npo='{$Npo}',
+                                gl='{$Gl}'
                                 WHERE date='$sessionDate' AND pId = '$pId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
@@ -1715,7 +2782,7 @@ if (isset($_POST['addSessionBtn'])) {
             }
         }
     } else {
-        $sql = "INSERT INTO patientsubsistence (pId, breakfast, lunch, dinner, date) VALUES ('$pId', '$Breakfast', '$Lunch', '$Dinner', '$sessionDate')";
+        $sql = "INSERT INTO patientsubsistence (pId, breakfast, lunch, dinner, npo, gl, date) VALUES ('$pId', '$Breakfast', '$Lunch', '$Dinner', '$Npo', '$Gl', '$sessionDate')";
         if (mysqli_query($conn, $sql)) {
             $sql2 = "SELECT * FROM reports WHERE SUBSTRING(date, 1,7) ='$monthAndYear' AND pId = '$pId'";
             $result2 = mysqli_query($conn, $sql2);
@@ -1755,6 +2822,8 @@ if (isset($_GET['updateSession'])) {
             $breakfast = $row['breakfast'];
             $lunch = $row['lunch'];
             $dinner = $row['dinner'];
+            $gl = $row['gl'];
+            $npo = $row['npo'];
             $pId = $row['pId'];
             $sessionDate = $row['date'];
             $getTodayDate = substr($sessionDate, 8, 2);
@@ -1822,6 +2891,24 @@ if (isset($_GET['updateSession'])) {
                 else if ($dinner == 'on') {
                     if ($listOfDayArray[$listOfDay] == $todayDate) {
                         $sql2 = "UPDATE reports SET $todayDate = 'd' WHERE pId = '$pId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: index.php?updateSession=1');
+                        }
+                    }
+                }
+                //NPO
+                else if ($npo == 'on') {
+                    if ($listOfDayArray[$listOfDay] == $todayDate) {
+                        $sql2 = "UPDATE reports SET $todayDate = 'NPO' WHERE pId = '$pId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: index.php?updateSession=1');
+                        }
+                    }
+                }
+                //GL
+                else if ($gl == 'on') {
+                    if ($listOfDayArray[$listOfDay] == $todayDate) {
+                        $sql2 = "UPDATE reports SET $todayDate = 'GL' WHERE pId = '$pId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: index.php?updateSession=1');
                         }

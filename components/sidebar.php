@@ -24,7 +24,7 @@
                         </a>
                     </li> -->
             <li>
-                <a data-toggle="modal" data-target="#addUserModal" class="nav-link">
+                <a data-toggle="modal" data-target="#addUserModal" class="nav-link" href="#">
                     <i class="nc-icon nc-circle-09"></i>
                     <p>Add User</p>
                 </a>
@@ -36,7 +36,7 @@
                 </a>
             </li>
             <li>
-                <a class="nav-link" name="generateReportBtn" data-toggle="modal" data-target="#generateReportsModal">
+                <a class="nav-link" name="generateReportBtn" data-toggle="modal" data-target="#generateReportsModal" href="#">
                     <i class="nc-icon nc-notes"></i>
                     <p>Generate Reports</p>
                 </a>

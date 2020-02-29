@@ -1715,9 +1715,20 @@ if (isset($_POST['addSessionBtn'])) {
             if (mysqli_num_rows($result2) > 0) {
                 header('Location: searchList.php?uId=' . $pId . '');
             } else {
-                $sql3 = "INSERT INTO reports (pId, date) VALUES ('$pId', '$sessionDate')";
-                if (mysqli_query($conn, $sql3)) {
-                    header('Location: searchList.php?uId=' . $pId . '');
+
+                $sql3 = "SELECT * FROM patient WHERE uId = '$pId'";
+                $result3 = mysqli_query($conn, $sql3);
+                if (mysqli_num_rows($result3) > 0) {
+                    while ($row2 = mysqli_fetch_assoc($result3)) {
+                        $lastName = $row2['lastName'];
+                        $firstName = $row2['firstName'];
+                        $middleName = $row2['middleName'];
+                    }
+                    $sql4 = "INSERT INTO reports (pId, date, lastName, firstName, middleName) VALUES ('$pId', '$sessionDate', '$lastName', '$firstName', '$middleName')";
+                    if (mysqli_query($conn, $sql4)) {
+
+                        header('Location: searchList.php?uId=' . $pId . '');
+                    }
                 }
             }
         } else {

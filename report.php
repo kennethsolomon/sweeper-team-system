@@ -77,9 +77,10 @@
 
                             $month = $_GET['month'];
                             $year = $_GET['year'];
-
                             $pId = $_GET['pId'];
-                            $sqlName = "SELECT * FROM patientsubsistence";
+                            $monthAndYear = $year . '-' . $month;
+
+                            $sqlName = "SELECT * FROM reports WHERE SUBSTRING(date, 1,7) ='$monthAndYear'";
                             $resultName = mysqli_query($conn, $sqlName);
 
                             if (mysqli_num_rows($resultName) > 0) {

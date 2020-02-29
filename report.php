@@ -18,6 +18,7 @@
     <link href="./assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="./assets/css/demo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -125,43 +126,43 @@
                                     echo '
                                     <tr>
                                         <td>' . $lastName . ',' . $firstName . ' ' . $middleName . '</td>
-                                        <td>' . $day01 . '</td>
-                                        <td>' . $day02 . '</td>
-                                        <td>' . $day03 . '</td>
-                                        <td>' . $day04 . '</td>
-
-                                        <td>' . $day05 . '</td>
-                                        <td>' . $day06 . '</td>
-                                        <td>' . $day07 . '</td>
-                                        <td>' . $day08 . '</td>
-                                        <td>' . $day09 . '</td>
+                                        <td class="centered"><img src="assets/img/' . $day01 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day02 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day03 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day04 . '.png" alt="report" height="30" width="30"></td>
+    
+                                        <td class="centered"><img src="assets/img/' . $day05 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day06 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day07 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day08 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day09 . '.png" alt="report" height="30" width="30"></td>
                                         
-                                        <td>' . $day10 . '</td>
-                                        <td>' . $day11 . '</td>
-                                        <td>' . $day12 . '</td>
-                                        <td>' . $day13 . '</td>
-                                        <td>' . $day14 . '</td>
+                                        <td class="centered"><img src="assets/img/' . $day10 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day11 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day12 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day13 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day14 . '.png" alt="report" height="30" width="30"></td>
 
-                                        <td>' . $day15 . '</td>
-                                        <td>' . $day16 . '</td>
-                                        <td>' . $day17 . '</td>
-                                        <td>' . $day18 . '</td>
-                                        <td>' . $day19 . '</td>
+                                        <td class="centered"><img src="assets/img/' . $day15 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day16 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day17 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day18 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day19 . '.png" alt="report" height="30" width="30"></td>
 
-                                        <td>' . $day20 . '</td>
-                                        <td>' . $day21 . '</td>
-                                        <td>' . $day22 . '</td>
-                                        <td>' . $day23 . '</td>
-                                        <td>' . $day24 . '</td>
+                                        <td class="centered"><img src="assets/img/' . $day20 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day21 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day22 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day23 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day24 . '.png" alt="report" height="30" width="30"></td>
 
-                                        <td>' . $day25 . '</td>
-                                        <td>' . $day26 . '</td>
-                                        <td>' . $day27 . '</td>
-                                        <td>' . $day28 . '</td>
-                                        <td>' . $day29 . '</td>
+                                        <td class="centered"><img src="assets/img/' . $day25 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day26 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day27 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day28 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day29 . '.png" alt="report" height="30" width="30"></td>
 
-                                        <td>' . $day30 . '</td>
-                                        <td>' . $day31 . '</td>
+                                        <td class="centered"><img src="assets/img/' . $day30 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . $day31 . '.png" alt="report" height="30" width="30"></td>
                                         <td></td>
                                     </tr>
                                     ';

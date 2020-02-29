@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 29, 2020 at 03:00 PM
+-- Generation Time: Feb 29, 2020 at 03:45 PM
 -- Server version: 10.4.12-MariaDB
 -- PHP Version: 7.4.2
 
@@ -69,9 +69,10 @@ CREATE TABLE `patientsubsistence` (
 --
 
 INSERT INTO `patientsubsistence` (`id`, `pId`, `date`, `breakfast`, `lunch`, `dinner`, `npo`, `gl`) VALUES
-(97, 'k77jcywurnxnvyu94j8', '2020-02-29', '', '', '', 'on', 'on'),
-(98, 'k77jcywurnxnvyu94j8', '2020-02-28', 'on', '', '', '', ''),
-(99, 'k77jcywurnxnvyu94j8', '2020-02-01', '', '', '', '', 'on');
+(100, 'k77jcywurnxnvyu94j8', '2020-02-29', '', '', 'on', 'on', 'on'),
+(101, 'k77jcywurnxnvyu94j8', '2020-02-28', 'on', 'on', '', '', ''),
+(102, 'k77iunnlbxih271e95f', '2020-02-29', '', 'on', 'on', '', ''),
+(103, 'k77jcywurnxnvyu94j8', '2020-02-03', '', 'on', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -125,7 +126,8 @@ CREATE TABLE `reports` (
 --
 
 INSERT INTO `reports` (`id`, `pId`, `lastName`, `firstName`, `middleName`, `ward`, `date`, `day01`, `day02`, `day03`, `day04`, `day05`, `day06`, `day07`, `day08`, `day09`, `day10`, `day11`, `day12`, `day13`, `day14`, `day15`, `day16`, `day17`, `day18`, `day19`, `day20`, `day21`, `day22`, `day23`, `day24`, `day25`, `day26`, `day27`, `day28`, `day29`, `day30`, `day31`) VALUES
-(63, 'k77jcywurnxnvyu94j8', 'Huenda', 'Aldrin', 'Borja', 'General', '2020-02-29', 'GL', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'b', 'NPO', NULL, NULL);
+(64, 'k77jcywurnxnvyu94j8', 'Huenda', 'Aldrin', 'Borja', 'General', '2020-02-29', NULL, NULL, 'l', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'bl', 'd', NULL, NULL),
+(65, 'k77iunnlbxih271e95f', 'Solomon', 'Kenneth', 'Lim', 'General', '2020-02-29', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'dl', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -163,13 +165,13 @@ ALTER TABLE `patient`
 -- AUTO_INCREMENT for table `patientsubsistence`
 --
 ALTER TABLE `patientsubsistence`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- AUTO_INCREMENT for table `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -12,6 +12,8 @@ if (mysqli_num_rows($result) > 0) {
             <td>' . $row['breakfast'] . '</td>
             <td>' . $row['lunch'] . '</td>
             <td>' . $row['dinner'] . '</td>
+            <td>' . $row['npo'] . '</td>
+            <td>' . $row['gl'] . '</td>
         </tr>
 ';
     }

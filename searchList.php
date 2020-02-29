@@ -126,6 +126,8 @@
                                                     <th>Breakfast</th>
                                                     <th>Lunch</th>
                                                     <th>Dinner</th>
+                                                    <th>NPO</th>
+                                                    <th>GL</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

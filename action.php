@@ -2896,24 +2896,24 @@ if (isset($_GET['updateSession'])) {
                         }
                     }
                 }
-                //NPO
-                else if ($npo == 'on') {
-                    if ($listOfDayArray[$listOfDay] == $todayDate) {
-                        $sql2 = "UPDATE reports SET $todayDate = 'NPO' WHERE pId = '$pId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
-                        if (mysqli_query($conn, $sql2)) {
-                            header('Location: index.php?updateSession=1');
-                        }
-                    }
-                }
-                //GL
-                else if ($gl == 'on') {
-                    if ($listOfDayArray[$listOfDay] == $todayDate) {
-                        $sql2 = "UPDATE reports SET $todayDate = 'GL' WHERE pId = '$pId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
-                        if (mysqli_query($conn, $sql2)) {
-                            header('Location: index.php?updateSession=1');
-                        }
-                    }
-                }
+                // //NPO
+                // else if ($npo == 'on') {
+                //     if ($listOfDayArray[$listOfDay] == $todayDate) {
+                //         $sql2 = "UPDATE reports SET $todayDate = 'NPO' WHERE pId = '$pId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
+                //         if (mysqli_query($conn, $sql2)) {
+                //             header('Location: index.php?updateSession=1');
+                //         }
+                //     }
+                // }
+                // //GL
+                // else if ($gl == 'on') {
+                //     if ($listOfDayArray[$listOfDay] == $todayDate) {
+                //         $sql2 = "UPDATE reports SET $todayDate = 'GL' WHERE pId = '$pId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
+                //         if (mysqli_query($conn, $sql2)) {
+                //             header('Location: index.php?updateSession=1');
+                //         }
+                //     }
+                // }
                 //Default
                 else {
                     if ($listOfDayArray[$listOfDay] == $todayDate) {

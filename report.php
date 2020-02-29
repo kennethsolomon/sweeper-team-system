@@ -37,41 +37,107 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
+                                <th scope="col">NAME</th>
                                 <th scope="col">1</th>
                                 <th scope="col">2</th>
                                 <th scope="col">3</th>
+                                <th scope="col">4</th>
+                                <th scope="col">5</th>
+                                <th scope="col">6</th>
+                                <th scope="col">7</th>
+                                <th scope="col">8</th>
+                                <th scope="col">9</th>
+                                <th scope="col">10</th>
+                                <th scope="col">11</th>
+                                <th scope="col">12</th>
+                                <th scope="col">13</th>
+                                <th scope="col">14</th>
+                                <th scope="col">15</th>
+                                <th scope="col">16</th>
+                                <th scope="col">17</th>
+                                <th scope="col">18</th>
+                                <th scope="col">19</th>
+                                <th scope="col">20</th>
+                                <th scope="col">21</th>
+                                <th scope="col">22</th>
+                                <th scope="col">23</th>
+                                <th scope="col">24</th>
+                                <th scope="col">25</th>
+                                <th scope="col">26</th>
+                                <th scope="col">27</th>
                                 <th scope="col">28</th>
+                                <th scope="col">29</th>
+                                <th scope="col">30</th>
+                                <th scope="col">31</th>
+                                <th scope="col">TOTAL</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <?php
+                            <?php
 
-                                $month = $_GET['month'];
-                                $year = $_GET['year'];
+                            $month = $_GET['month'];
+                            $year = $_GET['year'];
 
-                                $pId = $_GET['pId'];
-                                $sqlName = "SELECT * FROM patientsubsistence where pId = '$pId' AND SUBSTRING(date, 6,7) = $month and SUBSTRING(date, 1, 4) = $year";
-                                $resultName = mysqli_query($conn, $sqlName);
+                            $pId = $_GET['pId'];
+                            $sqlName = "SELECT * FROM patientsubsistence";
+                            $resultName = mysqli_query($conn, $sqlName);
 
-                                if (mysqli_num_rows($resultName) > 0) {
-                                    while ($rowName = mysqli_fetch_assoc($resultName)) {
-                                        $day1 = $rowName['day1'];
-                                        $day2 = $rowName['day2'];
-                                        $day3 = $rowName['day3'];
-                                        $day28 = $rowName['day28'];
-                                        echo '
-                                            <td>' . $day1 . '</td>
-                                            <td>' . $day2 . '</td>
-                                            <td>' . $day3 . '</td>
-                                            <td>' . $day28 . '</td>
-                                            ';
-                                    }
+                            if (mysqli_num_rows($resultName) > 0) {
+                                while ($rowName = mysqli_fetch_assoc($resultName)) {
+                                    $pId = $rowName['pId'];
+                                    $day1 = $rowName['day01'];
+                                    $day2 = $rowName['day02'];
+                                    $day28 = $rowName['day28'];
+                                    $day29 = $rowName['day29'];
+
+                                    echo '
+                                    <tr>
+                                        <td>' . $pId . '</td>
+                                        <td>' . $day1 . '</td>
+                                        <td>' . $day28 . '</td>
+                                        <td>' . $day29 . '</td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    ';
                                 }
+                            }
 
-                                ?>
+                            ?>
 
-                            </tr>
                         </tbody>
                     </table>
                 </div>

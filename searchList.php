@@ -109,8 +109,10 @@
 
                         <div class="row">
                             <div class="col-md-12">
+                                <a href="action.php?uId=<?php echo $_GET['uId'] ?>&updateSession=1" type="submit" name="updateSession" class="btn btn-success btn-fill pull-right ml-2">Update Data</a>
                                 <button type="submit" name="generateReportBtn" data-toggle="modal" data-target="#generateReportsModal" class="btn btn-success btn-fill pull-right mb-2">Generate Report</button>
                             </div>
+
                         </div>
 
                         <div class="row">
@@ -139,7 +141,6 @@
                                         <h4 class="card-title">Patient’s Subsistence Report</h4>
                                         <!-- <p class="card-category">Here is a subtitle for this table</p> -->
                                         <button type="submit" data-toggle="modal" data-target="#sessionModal" class="btn btn-info btn-fill pull-right">Today Session</button>
-                                        <a href="action.php?uId=<?php echo $_GET['uId'] ?>&updateSession=1" type="submit" name="updateSession" class="btn btn-info btn-fill pull-right mr-2">Update</a>
                                     </div>
                                     <div class="card-body table-full-width table-responsive">
                                         <table class="table table-hover table-striped">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 29, 2020 at 12:02 PM
+-- Generation Time: Feb 29, 2020 at 12:19 PM
 -- Server version: 10.4.12-MariaDB
 -- PHP Version: 7.4.2
 
@@ -70,7 +70,8 @@ CREATE TABLE `patientsubsistence` (
 
 INSERT INTO `patientsubsistence` (`id`, `pId`, `month`, `year`, `date`, `breakfast`, `lunch`, `dinner`) VALUES
 (90, 'k77jcywurnxnvyu94j8', NULL, NULL, '2020-02-29', 'on', 'on', ''),
-(91, 'k77iunnlbxih271e95f', NULL, NULL, '2020-02-29', '', 'on', 'on');
+(91, 'k77iunnlbxih271e95f', NULL, NULL, '2020-02-29', '', 'on', 'on'),
+(92, 'k77iunnlbxih271e95f', NULL, NULL, '2020-02-28', 'on', 'on', 'on');
 
 -- --------------------------------------------------------
 
@@ -125,7 +126,7 @@ CREATE TABLE `reports` (
 
 INSERT INTO `reports` (`id`, `pId`, `lastName`, `firstName`, `middleName`, `ward`, `date`, `day01`, `day02`, `day03`, `day04`, `day05`, `day06`, `day07`, `day08`, `day09`, `day10`, `day11`, `day12`, `day13`, `day14`, `day15`, `day16`, `day17`, `day18`, `day19`, `day20`, `day21`, `day22`, `day23`, `day24`, `day25`, `day26`, `day27`, `day28`, `day29`, `day30`, `day31`) VALUES
 (61, 'k77jcywurnxnvyu94j8', 'Huenda', 'Aldrin', 'Borja', 'General', '2020-02-29', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'bl', NULL, NULL),
-(62, 'k77iunnlbxih271e95f', 'Solomon', 'Kenneth', 'Lim', 'OB', '2020-02-29', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'dl', NULL, NULL);
+(62, 'k77iunnlbxih271e95f', 'Solomon', 'Kenneth', 'Lim', 'OB', '2020-02-29', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'bld', 'dl', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -163,7 +164,7 @@ ALTER TABLE `patient`
 -- AUTO_INCREMENT for table `patientsubsistence`
 --
 ALTER TABLE `patientsubsistence`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
 
 --
 -- AUTO_INCREMENT for table `reports`

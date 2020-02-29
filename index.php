@@ -98,25 +98,122 @@
                     <?php include_once './modals/generateReports.php' ?>
 
                     <!-- Autocomplete -->
-                    <div class="row" style="margin-left:210px">
-                        <div class="col-md-12  bg-light p-4 mt-3 rounded">
-                            <h2 style="margin-left:460px">Patient Search:</h2>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12  bg-light p-4 mt-3 rounded">
+                                <center>
+                                    <h2>Patient Search:</h2>
+                                </center>
 
-                            <form action="server.php" class="form-inline p-3" method="post">
-                                <input type="text" name="search" id="search" class="form-control form-control-lg rounded-0 border-info" placeholder="Search..." style="width:90%">
-                                <!-- <input type="submit" name="submit" value="Search" class="btn btn-info btn-md rounded-0" stlye="width:20%"> -->
-                            </form>
+                                <form action="server.php" class="form-inline p-3" method="post">
+                                    <input type="text" name="search" id="search" class="form-control form-control-lg rounded-0 border-info" placeholder="Search..." style="width:100%">
+                                    <!-- <input type="submit" name="submit" value="Search" class="btn btn-info btn-md rounded-0" stlye="width:20%"> -->
+                                </form>
 
-                        </div>
-                        <div class="col-md-9" style="position:relative; margin-top:-38px; margin-left:25px">
-                            <div class="list-group" id="show-list">
-                                <!-- Search Results -->
                             </div>
-                        </div>
+                            <div class="col-md-9" style="position:relative; margin-top:-38px; margin-left:25px">
+                                <div class="list-group" id="show-list">
+                                    <!-- Search Results -->
+                                </div>
+                            </div>
 
+                        </div>
                     </div>
 
+
                 </div>
+
+
+                <div class="container">
+                    <center>
+                        <h2>Patient Session Search:</h2>
+                    </center>
+                    <div class="row">
+
+                        <div class="col-md-12 border border-info">
+                            <table id="example" class="table table-striped table-bordered" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Full Name</th>
+                                        <th>Date Of Birth</th>
+                                        <th>Ward</th>
+                                        <th>Session Date</th>
+                                        <th>Breakfast</th>
+                                        <th>Lunch</th>
+                                        <th>Dinner</th>
+                                        <th>NPO</th>
+                                        <th>GL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <?php
+                                    $sql = "SELECT * FROM patientsubsistence";
+                                    $result = mysqli_query($conn, $sql);
+
+                                    if (mysqli_num_rows($result) > 0) {
+                                        while ($row = mysqli_fetch_assoc($result)) {
+                                            $pId = $row['pId'];
+                                            $date = $row['date'];
+                                            $breakfast = $row['breakfast'];
+                                            $lunch = $row['lunch'];
+                                            $dinner = $row['dinner'];
+                                            $npo = $row['npo'];
+                                            $gl = $row['gl'];
+
+                                            $sql2 = "SELECT * FROM patient where uId = '$pId' ";
+                                            $result2 = mysqli_query($conn, $sql2);
+
+                                            if (mysqli_num_rows($result2) > 0) {
+                                                while ($row2 = mysqli_fetch_assoc($result2)) {
+                                                    $lastName = $row2['lastName'];
+                                                    $firstName = $row2['firstName'];
+                                                    $middleName = $row2['middleName'];
+                                                    $ward = $row2['ward'];
+                                                    $dateOfBirth = $row2['dateOfBirth'];
+                                                }
+                                            }
+
+                                            echo '
+                                                <tr>
+                                                <td>' . $lastName . ',' . $firstName . ' ' . $middleName . '</td>
+                                                <td>' . $dateOfBirth . '</td>
+                                                <td>' . $ward . '</td>
+                                                <td>' . $date . '</td>
+                                                <td>' . $breakfast . '</td>
+                                                <td>' . $lunch . '</td>
+                                                <td>' . $dinner . '</td>
+                                                <td>' . $npo . '</td>
+                                                <td>' . $gl . '</td>
+                                                </tr>
+                                                ';
+                                        }
+                                    }
+                                    ?>
+
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>Full Name</th>
+                                        <th>Date Of Birth</th>
+                                        <th>Ward</th>
+                                        <th>Session Date</th>
+                                        <th>Breakfast</th>
+                                        <th>Lunch</th>
+                                        <th>Dinner</th>
+                                        <th>NPO</th>
+                                        <th>GL</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
             </div>
             <?php include_once './components/footer.php' ?>
         </div>
@@ -217,12 +314,20 @@
 <script src="./assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
 <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
 <script src="./assets/js/demo.js"></script>
+
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
 <script type="text/javascript">
     $(document).ready(function() {
         // Javascript method's body can be found in assets/js/demos.js
         demo.initDashboardPageCharts();
 
         // demo.showNotification("Goodshit!");
+    });
+
+    $(document).ready(function() {
+        $('#example').DataTable();
     });
 </script>
 

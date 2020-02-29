@@ -71,7 +71,23 @@
                     }, 3000);
                 </script>
                 <div id="alert_message" class="alert alert-info text-center">
-                    Session Addedd Successfully!
+                    Session Added Successfully!
+                </div>
+                ';
+                echo $addSessionSuccessfully;
+            }
+
+            if (isset($_GET['updateSession'])) {
+                $addSessionSuccessfully = '
+                <script>
+                window.setTimeout(function() {
+                    $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
+                        $(this).remove(); 
+                    });
+                    }, 3000);
+                </script>
+                <div id="alert_message" class="alert alert-info text-center">
+                    Session Updated Successfully!
                 </div>
                 ';
                 echo $addSessionSuccessfully;
@@ -123,7 +139,7 @@
                                         <h4 class="card-title">Patient’s Subsistence Report</h4>
                                         <!-- <p class="card-category">Here is a subtitle for this table</p> -->
                                         <button type="submit" data-toggle="modal" data-target="#sessionModal" class="btn btn-info btn-fill pull-right">Today Session</button>
-                                        <a href="action.php?updateSession=1" type="submit" name="updateSession" class="btn btn-info btn-fill pull-right mr-2">Update</a>
+                                        <a href="action.php?uId=<?php echo $_GET['uId'] ?>&updateSession=1" type="submit" name="updateSession" class="btn btn-info btn-fill pull-right mr-2">Update</a>
                                     </div>
                                     <div class="card-body table-full-width table-responsive">
                                         <table class="table table-hover table-striped">

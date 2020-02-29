@@ -120,7 +120,7 @@ if (isset($_POST['addSessionBtn'])) {
     $todayDate = substr($sessionDate, 8, 2);
 
 
-    $sql = "SELECT * FROM patientsubsistence WHERE date='$sessionDate'";
+    $sql = "SELECT * FROM patientsubsistence WHERE date='$sessionDate' AND pId = '$pId'";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
@@ -128,6 +128,83 @@ if (isset($_POST['addSessionBtn'])) {
             $breakfast = $row['breakfast'];
             $lunch = $row['lunch'];
             $dinner = $row['dinner'];
+
+            if ($breakfast == 'on' && $lunch == 'on' && $dinner == 'on') {
+                switch ($todayDate) {
+                    case 28:
+                        $sql2 = "UPDATE patientsubsistence SET 
+                            breakfast='{$Breakfast}', 
+                            lunch='{$Lunch}', 
+                            dinner='{$Dinner}'
+                            WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    default:
+                        echo "Your favorite color is neither red, blue, nor green!";
+                }
+            } else if ($breakfast == 'on' && $lunch == 'on') {
+                switch ($todayDate) {
+                    case 28:
+                        $sql2 = "UPDATE patientsubsistence SET 
+                            breakfast='{$Breakfast}', 
+                            lunch='{$Lunch}', 
+                            dinner='{$Dinner}'
+                            WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    default:
+                        echo "Your favorite color is neither red, blue, nor green!";
+                }
+            } else if ($breakfast == 'on' && $dinner == 'on') {
+                switch ($todayDate) {
+                    case 28:
+                        $sql2 = "UPDATE patientsubsistence SET 
+                            breakfast='{$Breakfast}', 
+                            lunch='{$Lunch}', 
+                            dinner='{$Dinner}'
+                            WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    default:
+                        echo "Your favorite color is neither red, blue, nor green!";
+                }
+            } else if ($breakfast == 'on') {
+                switch ($todayDate) {
+                    case 28:
+                        $sql2 = "UPDATE patientsubsistence SET 
+                            breakfast='{$Breakfast}', 
+                            lunch='{$Lunch}', 
+                            dinner='{$Dinner}'
+                            WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    default:
+                        echo "Your favorite color is neither red, blue, nor green!";
+                }
+            } else {
+                switch ($todayDate) {
+                    case 28:
+                        $sql2 = "UPDATE patientsubsistence SET 
+                            breakfast='{$Breakfast}', 
+                            lunch='{$Lunch}', 
+                            dinner='{$Dinner}'
+                            WHERE date='$sessionDate' AND pId = '$pId'";
+                        if (mysqli_query($conn, $sql2)) {
+                            header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
+                        }
+                        break;
+                    default:
+                        echo "Your favorite color is neither red, blue, nor green!";
+                }
+            }
         }
     } else {
         $sql = "INSERT INTO patientsubsistence (pId, breakfast, lunch, dinner, date) VALUES ('$pId', '$Breakfast', '$Lunch', '$Dinner', '$sessionDate')";
@@ -138,86 +215,10 @@ if (isset($_POST['addSessionBtn'])) {
         }
         exit();
     }
-
-    if ($breakfast == 'on' && $lunch == 'on' && $dinner == 'on') {
-        switch ($todayDate) {
-            case 28:
-                $sql2 = "UPDATE patientsubsistence SET 
-                    breakfast='{$Breakfast}', 
-                    lunch='{$Lunch}', 
-                    dinner='{$Dinner}'
-                    WHERE date='$sessionDate'";
-                if (mysqli_query($conn, $sql2)) {
-                    header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
-                }
-                break;
-            default:
-                echo "Your favorite color is neither red, blue, nor green!";
-        }
-    } else if ($breakfast == 'on' && $lunch == 'on') {
-        switch ($todayDate) {
-            case 28:
-                $sql2 = "UPDATE patientsubsistence SET 
-                    breakfast='{$Breakfast}', 
-                    lunch='{$Lunch}', 
-                    dinner='{$Dinner}'
-                    WHERE date='$sessionDate'";
-                if (mysqli_query($conn, $sql2)) {
-                    header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
-                }
-                break;
-            default:
-                echo "Your favorite color is neither red, blue, nor green!";
-        }
-    } else if ($breakfast == 'on' && $dinner == 'on') {
-        switch ($todayDate) {
-            case 28:
-                $sql2 = "UPDATE patientsubsistence SET 
-                    breakfast='{$Breakfast}', 
-                    lunch='{$Lunch}', 
-                    dinner='{$Dinner}'
-                    WHERE date='$sessionDate'";
-                if (mysqli_query($conn, $sql2)) {
-                    header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
-                }
-                break;
-            default:
-                echo "Your favorite color is neither red, blue, nor green!";
-        }
-    } else if ($breakfast == 'on') {
-        switch ($todayDate) {
-            case 28:
-                $sql2 = "UPDATE patientsubsistence SET 
-                    breakfast='{$Breakfast}', 
-                    lunch='{$Lunch}', 
-                    dinner='{$Dinner}'
-                    WHERE date='$sessionDate'";
-                if (mysqli_query($conn, $sql2)) {
-                    header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
-                }
-                break;
-            default:
-                echo "Your favorite color is neither red, blue, nor green!";
-        }
-    } else {
-        switch ($todayDate) {
-            case 28:
-                $sql2 = "UPDATE patientsubsistence SET 
-                    breakfast='{$Breakfast}', 
-                    lunch='{$Lunch}', 
-                    dinner='{$Dinner}'
-                    WHERE date='$sessionDate'";
-                if (mysqli_query($conn, $sql2)) {
-                    header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
-                }
-                break;
-            default:
-                echo "Your favorite color is neither red, blue, nor green!";
-        }
-    }
 }
 
 if (isset($_GET['updateSession'])) {
+    $pId = $_GET['uId'];
     $sql = "SELECT * FROM patientsubsistence";
     $result = mysqli_query($conn, $sql);
 
@@ -226,7 +227,7 @@ if (isset($_GET['updateSession'])) {
             $breakfast = $row['breakfast'];
             $lunch = $row['lunch'];
             $dinner = $row['dinner'];
-            $pId = $row['pId'];
+            $rpId = $row['pId'];
             $sessionDate = $row['date'];
             $listOfDayArray = array("day1", "day2", "day28");
 
@@ -236,7 +237,7 @@ if (isset($_GET['updateSession'])) {
                 //Breakfast Lunch Dinner
                 if ($breakfast == 'on' && $lunch == 'on' && $dinner == 'on') {
                     if ($listOfDayArray[$listOfDay] == 'day28') {
-                        $sql2 = "UPDATE patientsubsistence SET day28 = 'bld' WHERE date='$sessionDate'";
+                        $sql2 = "UPDATE patientsubsistence SET day28 = 'bld' WHERE date='$sessionDate' AND pId = '$rpId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -245,7 +246,7 @@ if (isset($_GET['updateSession'])) {
                 //Breakfast Lunch 
                 else if ($breakfast == 'on' && $lunch == 'on') {
                     if ($listOfDayArray[$listOfDay] == 'day28') {
-                        $sql2 = "UPDATE patientsubsistence SET day28 = 'bl' WHERE date='$sessionDate'";
+                        $sql2 = "UPDATE patientsubsistence SET day28 = 'bl' WHERE date='$sessionDate' AND pId = '$rpId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -254,7 +255,7 @@ if (isset($_GET['updateSession'])) {
                 //Breakfast Dinner
                 else if ($breakfast == 'on' && $dinner == 'on') {
                     if ($listOfDayArray[$listOfDay] == 'day28') {
-                        $sql2 = "UPDATE patientsubsistence SET day28 = 'bd' WHERE date='$sessionDate'";
+                        $sql2 = "UPDATE patientsubsistence SET day28 = 'bd' WHERE date='$sessionDate' AND pId = '$rpId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -263,7 +264,7 @@ if (isset($_GET['updateSession'])) {
                 //Dinner Lunch
                 else if ($dinner == 'on' && $lunch == 'on') {
                     if ($listOfDayArray[$listOfDay] == 'day28') {
-                        $sql2 = "UPDATE patientsubsistence SET day28 = 'dl' WHERE date='$sessionDate'";
+                        $sql2 = "UPDATE patientsubsistence SET day28 = 'dl' WHERE date='$sessionDate' AND pId = '$rpId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -272,7 +273,7 @@ if (isset($_GET['updateSession'])) {
                 //Breakfast
                 else if ($breakfast == 'on') {
                     if ($listOfDayArray[$listOfDay] == 'day28') {
-                        $sql2 = "UPDATE patientsubsistence SET day28 = 'b' WHERE date='$sessionDate'";
+                        $sql2 = "UPDATE patientsubsistence SET day28 = 'b' WHERE date='$sessionDate' AND pId = '$rpId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -281,7 +282,7 @@ if (isset($_GET['updateSession'])) {
                 //Lunch
                 else if ($lunch == 'on') {
                     if ($listOfDayArray[$listOfDay] == 'day28') {
-                        $sql2 = "UPDATE patientsubsistence SET day28 = 'l' WHERE date='$sessionDate'";
+                        $sql2 = "UPDATE patientsubsistence SET day28 = 'l' WHERE date='$sessionDate' AND pId = '$rpId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -290,7 +291,7 @@ if (isset($_GET['updateSession'])) {
                 //Dinner
                 else if ($dinner == 'on') {
                     if ($listOfDayArray[$listOfDay] == 'day28') {
-                        $sql2 = "UPDATE patientsubsistence SET day28 = 'd' WHERE date='$sessionDate'";
+                        $sql2 = "UPDATE patientsubsistence SET day28 = 'd' WHERE date='$sessionDate' AND pId = '$rpId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -299,7 +300,7 @@ if (isset($_GET['updateSession'])) {
                 //Default
                 else {
                     if ($listOfDayArray[$listOfDay] == 'day28') {
-                        $sql2 = "UPDATE patientsubsistence SET day28 = NULL WHERE date='$sessionDate'";
+                        $sql2 = "UPDATE patientsubsistence SET day28 = NULL WHERE date='$sessionDate' AND pId = '$rpId'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }

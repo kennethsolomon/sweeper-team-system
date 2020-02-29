@@ -118,6 +118,7 @@ if (isset($_POST['addSessionBtn'])) {
     $Dinner = $_POST['Dinner'];
     $sessionDate = $_POST['sessionDate'];
     $todayDate = substr($sessionDate, 8, 2);
+    $monthAndYear = substr($sessionDate, 0, 7);
 
 
     $sql = "SELECT * FROM patientsubsistence WHERE date='$sessionDate' AND pId = '$pId'";
@@ -1709,7 +1710,16 @@ if (isset($_POST['addSessionBtn'])) {
     } else {
         $sql = "INSERT INTO patientsubsistence (pId, breakfast, lunch, dinner, date) VALUES ('$pId', '$Breakfast', '$Lunch', '$Dinner', '$sessionDate')";
         if (mysqli_query($conn, $sql)) {
-            header('Location: searchList.php?uId=' . $pId . '');
+            $sql2 = "SELECT * FROM reports WHERE SUBSTRING(date, 1,7) ='$monthAndYear' AND pId = '$pId'";
+            $result2 = mysqli_query($conn, $sql2);
+            if (mysqli_num_rows($result2) > 0) {
+                header('Location: searchList.php?uId=' . $pId . '');
+            } else {
+                $sql3 = "INSERT INTO reports (pId, date) VALUES ('$pId', '$sessionDate')";
+                if (mysqli_query($conn, $sql3)) {
+                    header('Location: searchList.php?uId=' . $pId . '');
+                }
+            }
         } else {
             echo "Error: " . mysqli_error($conn);
         }
@@ -1730,6 +1740,7 @@ if (isset($_GET['updateSession'])) {
             $rpId = $row['pId'];
             $sessionDate = $row['date'];
             $getTodayDate = substr($sessionDate, 8, 2);
+            $monthAndYear = substr($sessionDate, 0, 7);
             $todayDate = 'day' . $getTodayDate;
             $listOfDayArray = array("day01", "day02", "day03", "day04", "day05", "day06", "day07", "day08", "day09", "day10", "day11", "day12", "day13", "day14", "day15", "day16", "day17", "day18", "day19", "day20", "day21", "day22", "day23", "day24", "day25", "day26", "day27", "day28", "day29", "day30", "day31");
             // Loop listOfDayArray
@@ -1738,7 +1749,7 @@ if (isset($_GET['updateSession'])) {
                 //Breakfast Lunch Dinner
                 if ($breakfast == 'on' && $lunch == 'on' && $dinner == 'on') {
                     if ($listOfDayArray[$listOfDay] == $todayDate) {
-                        $sql2 = "UPDATE patient SET $todayDate = 'bld' WHERE uId = '$rpId'";
+                        $sql2 = "UPDATE reports SET $todayDate = 'bld' WHERE pId = '$rpId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -1747,7 +1758,7 @@ if (isset($_GET['updateSession'])) {
                 //Breakfast Lunch 
                 else if ($breakfast == 'on' && $lunch == 'on') {
                     if ($listOfDayArray[$listOfDay] == $todayDate) {
-                        $sql2 = "UPDATE patient SET $todayDate = 'bl' WHERE uId = '$rpId'";
+                        $sql2 = "UPDATE reports SET $todayDate = 'bl' WHERE pId = '$rpId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -1756,7 +1767,7 @@ if (isset($_GET['updateSession'])) {
                 //Breakfast Dinner
                 else if ($breakfast == 'on' && $dinner == 'on') {
                     if ($listOfDayArray[$listOfDay] == $todayDate) {
-                        $sql2 = "UPDATE patient SET $todayDate = 'bd' WHERE uId = '$rpId'";
+                        $sql2 = "UPDATE reports SET $todayDate = 'bd' WHERE pId = '$rpId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -1765,7 +1776,7 @@ if (isset($_GET['updateSession'])) {
                 //Dinner Lunch
                 else if ($dinner == 'on' && $lunch == 'on') {
                     if ($listOfDayArray[$listOfDay] == $todayDate) {
-                        $sql2 = "UPDATE patient SET $todayDate = 'dl' WHERE uId = '$rpId'";
+                        $sql2 = "UPDATE reports SET $todayDate = 'dl' WHERE pId = '$rpId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -1774,7 +1785,7 @@ if (isset($_GET['updateSession'])) {
                 //Breakfast
                 else if ($breakfast == 'on') {
                     if ($listOfDayArray[$listOfDay] == $todayDate) {
-                        $sql2 = "UPDATE patient SET $todayDate = 'b' WHERE uId = '$rpId'";
+                        $sql2 = "UPDATE reports SET $todayDate = 'b' WHERE pId = '$rpId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -1783,7 +1794,7 @@ if (isset($_GET['updateSession'])) {
                 //Lunch
                 else if ($lunch == 'on') {
                     if ($listOfDayArray[$listOfDay] == $todayDate) {
-                        $sql2 = "UPDATE patient SET $todayDate = 'l' WHERE uId = '$rpId'";
+                        $sql2 = "UPDATE reports SET $todayDate = 'l' WHERE pId = '$rpId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -1792,7 +1803,7 @@ if (isset($_GET['updateSession'])) {
                 //Dinner
                 else if ($dinner == 'on') {
                     if ($listOfDayArray[$listOfDay] == $todayDate) {
-                        $sql2 = "UPDATE patient SET $todayDate = 'd' WHERE uId = '$rpId'";
+                        $sql2 = "UPDATE reports SET $todayDate = 'd' WHERE pId = '$rpId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }
@@ -1801,7 +1812,7 @@ if (isset($_GET['updateSession'])) {
                 //Default
                 else {
                     if ($listOfDayArray[$listOfDay] == $todayDate) {
-                        $sql2 = "UPDATE patient SET $todayDate = NULL WHERE uId = '$rpId'";
+                        $sql2 = "UPDATE reports SET $todayDate = NULL WHERE pId = '$rpId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";
                         if (mysqli_query($conn, $sql2)) {
                             header('Location: searchList.php?uId=' . $pId . '&addSession=' . $sessionDate . '');
                         }

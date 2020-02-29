@@ -76,22 +76,6 @@
                 ';
                 echo $addSessionSuccessfully;
             }
-
-            if (isset($_GET['updateSession'])) {
-                $addSessionSuccessfully = '
-                <script>
-                window.setTimeout(function() {
-                    $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
-                        $(this).remove(); 
-                    });
-                    }, 3000);
-                </script>
-                <div id="alert_message" class="alert alert-info text-center">
-                    Session Updated Successfully!
-                </div>
-                ';
-                echo $addSessionSuccessfully;
-            }
             ?>
 
             <!-- Display Area -->
@@ -106,14 +90,6 @@
                     <?php include_once './modals/generateReports.php' ?>
 
                     <div class="container">
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <a href="action.php?uId=<?php echo $_GET['uId'] ?>&updateSession=1" type="submit" name="updateSession" class="btn btn-success btn-fill pull-right ml-2">Update Data</a>
-                                <button type="submit" name="generateReportBtn" data-toggle="modal" data-target="#generateReportsModal" class="btn btn-success btn-fill pull-right mb-2">Generate Report</button>
-                            </div>
-
-                        </div>
 
                         <div class="row">
                             <div class="col-md-12 ">

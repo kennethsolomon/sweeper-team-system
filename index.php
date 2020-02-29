@@ -75,8 +75,27 @@
                     <!-- Display Area -->
                     <div id="display_area"></div>
 
+                    <?php
+                    if (isset($_GET['updateSession'])) {
+                        $addSessionSuccessfully = '
+                        <script>
+                        window.setTimeout(function() {
+                            $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
+                                $(this).remove(); 
+                            });
+                            }, 3000);
+                        </script>
+                        <div id="alert_message" class="alert alert-info text-center">
+                            Session Updated Successfully!
+                        </div>
+                        ';
+                        echo $addSessionSuccessfully;
+                    }
+                    ?>
+
                     <!-- Modal -->
                     <?php include_once './modals/addUserModal.php' ?>
+                    <?php include_once './modals/generateReports.php' ?>
 
                     <!-- Autocomplete -->
                     <div class="row" style="margin-left:210px">

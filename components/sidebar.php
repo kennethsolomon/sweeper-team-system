@@ -30,18 +30,18 @@
                 </a>
             </li>
             <li>
-                <a class="nav-link" href="./table.html">
-                    <i class="nc-icon nc-notes"></i>
-                    <p>Table List</p>
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" href="./typography.html">
+                <a class="nav-link" href="action.php?updateSession=1">
                     <i class="nc-icon nc-paper-2"></i>
-                    <p>Typography</p>
+                    <p>Update Data</p>
                 </a>
             </li>
             <li>
+                <a class="nav-link" name="generateReportBtn" data-toggle="modal" data-target="#generateReportsModal">
+                    <i class="nc-icon nc-notes"></i>
+                    <p>Generate Reports</p>
+                </a>
+            </li>
+            <!-- <li>
                 <a class="nav-link" href="./icons.html">
                     <i class="nc-icon nc-atom"></i>
                     <p>Icons</p>
@@ -64,7 +64,7 @@
                     <i class="nc-icon nc-alien-33"></i>
                     <p>Upgrade to PRO</p>
                 </a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </div>

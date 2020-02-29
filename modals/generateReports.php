@@ -10,7 +10,7 @@
             <div class="modal-body text-center">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Select Month</h4>
+                        <h4 class="card-title">Select Month,Year and Ward</h4>
                     </div>
                     <form action="report.php" method="get">
                         <div class="card-body">

@@ -20,7 +20,13 @@ if (isset($_POST['updatePatientBtn'])) {
       ward='{$ward}' 
       WHERE uId='$pId'";
     if (mysqli_query($conn, $sql)) {
-        echo '
+
+        $sql2 = "UPDATE reports SET 
+        ward='{$ward}' 
+        WHERE pId='$pId'";
+
+        if (mysqli_query($conn, $sql2)) {
+            echo '
       <div class="card-body" id="patientInfo">
         <form method="post">
             <div class="row">
@@ -70,7 +76,8 @@ if (isset($_POST['updatePatientBtn'])) {
         </form>
       </div>
       ';
-        header('Location: searchList.php?uId=' . $pId . '&status=newUpdate');
+            header('Location: searchList.php?uId=' . $pId . '&status=newUpdate');
+        }
     } else {
         echo "Error: " . mysqli_error($conn);
     }

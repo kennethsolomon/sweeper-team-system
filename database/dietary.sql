@@ -2,9 +2,9 @@
 -- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 28, 2020 at 02:18 PM
--- Server version: 10.4.12-MariaDB
+-- Host: 127.0.0.1
+-- Generation Time: Feb 29, 2020 at 05:20 AM
+-- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -44,7 +44,8 @@ CREATE TABLE `patient` (
 --
 
 INSERT INTO `patient` (`id`, `uId`, `lastName`, `firstName`, `middleName`, `dateOfBirth`, `createdAt`, `ward`) VALUES
-(51, 'k75j52f63675bsbjxsh', 'Solomon', 'Kenneth', 'Lim', '1997-07-12', '2020-02-28 10:00:38.292321', 'General');
+(51, 'k75j52f63675bsbjxsh', 'Solomon', 'Kenneth', 'Lim', '1997-07-12', '2020-02-28 10:00:38.292321', 'General'),
+(53, 'k76xpkcxwm97n8ms61', 'Huenda', 'Aldrin Ray', 'Borja', '1997-07-13', '2020-02-29 09:36:15.463853', 'OB');
 
 -- --------------------------------------------------------
 
@@ -61,15 +62,15 @@ CREATE TABLE `patientsubsistence` (
   `breakfast` varchar(225) COLLATE utf8mb4_unicode_ci NOT NULL,
   `lunch` varchar(225) COLLATE utf8mb4_unicode_ci NOT NULL,
   `dinner` varchar(225) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `day1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `day2` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `day3` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `day4` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `day5` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `day6` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `day7` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `day8` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `day9` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `day01` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `day02` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `day03` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `day04` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `day05` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `day06` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `day07` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `day08` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `day09` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `day10` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `day11` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `day12` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -98,8 +99,9 @@ CREATE TABLE `patientsubsistence` (
 -- Dumping data for table `patientsubsistence`
 --
 
-INSERT INTO `patientsubsistence` (`id`, `pId`, `month`, `year`, `date`, `breakfast`, `lunch`, `dinner`, `day1`, `day2`, `day3`, `day4`, `day5`, `day6`, `day7`, `day8`, `day9`, `day10`, `day11`, `day12`, `day13`, `day14`, `day15`, `day16`, `day17`, `day18`, `day19`, `day20`, `day21`, `day22`, `day23`, `day24`, `day25`, `day26`, `day27`, `day28`, `day29`, `day30`, `day31`) VALUES
-(31, 'k75j52f63675bsbjxsh', NULL, NULL, '2020-02-28', '', 'on', '', 'bld', 'b', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'l', NULL, NULL, NULL);
+INSERT INTO `patientsubsistence` (`id`, `pId`, `month`, `year`, `date`, `breakfast`, `lunch`, `dinner`, `day01`, `day02`, `day03`, `day04`, `day05`, `day06`, `day07`, `day08`, `day09`, `day10`, `day11`, `day12`, `day13`, `day14`, `day15`, `day16`, `day17`, `day18`, `day19`, `day20`, `day21`, `day22`, `day23`, `day24`, `day25`, `day26`, `day27`, `day28`, `day29`, `day30`, `day31`) VALUES
+(58, 'k75j52f63675bsbjxsh', NULL, NULL, '2020-02-29', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(59, 'k75j52f63675bsbjxsh', NULL, NULL, '2020-02-28', 'on', 'on', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'bl', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -125,13 +127,13 @@ ALTER TABLE `patientsubsistence`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT for table `patientsubsistence`
 --
 ALTER TABLE `patientsubsistence`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

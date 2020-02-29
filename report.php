@@ -129,6 +129,12 @@
                                         $countDay = $countDay + strlen($listOfDayArray[$listOfDay]);
                                     }
 
+                                    $devideCount = floor($countDay / 3);
+                                    $moduloCountDay = $countDay % 3;
+
+
+
+
                                     echo '
                                     <tr>
                                         <td>' . $lastName . ',' . $firstName . ' ' . $middleName . '</td>
@@ -169,9 +175,16 @@
 
                                         <td class="centered"><img src="assets/img/' . $day30 . '.png" alt="report" height="30" width="30"></td>
                                         <td class="centered"><img src="assets/img/' . $day31 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered">' . $countDay . '</td>
-                                    </tr>
-                                    ';
+                                        <td class="centered">';
+                                    if ($moduloCountDay > 0) {
+                                        echo $devideCount . ' ';
+                                        echo $moduloCountDay . '/3';
+                                    } else {
+                                        echo $devideCount;
+                                    }
+
+                                    '</td>
+                                    </tr>';
                                 }
                             }
 

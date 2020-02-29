@@ -43,8 +43,25 @@
                                 </div>
 
                             </div>
-                            <button type="submit" name="generateReportBtn" class="btn btn-info btn-fill pull-right ml-3">Generate</button>
-                            <div class="clearfix"></div>
+                            <div class="row">
+                                <div class="col-md-6 pr-1">
+                                    <div class="form-group">
+                                        <select id="ward" name="ward" class="form-control">
+                                            <option value="General">General</option>
+                                            <option value="Pedia/Surgery">Pedia/Surgery</option>
+                                            <option value="OB">OB</option>
+                                            <option value="Rehy/ISO">Rehy/ISO</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 pl-1 mt-5">
+                                    <div class="form-group">
+                                        <button type="submit" name="generateReportBtn" class="btn btn-info btn-fill pull-right ml-3">Generate</button>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </form>
 

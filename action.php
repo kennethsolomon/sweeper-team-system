@@ -1723,8 +1723,9 @@ if (isset($_POST['addSessionBtn'])) {
                         $lastName = $row2['lastName'];
                         $firstName = $row2['firstName'];
                         $middleName = $row2['middleName'];
+                        $ward = $row2['ward'];
                     }
-                    $sql4 = "INSERT INTO reports (pId, date, lastName, firstName, middleName) VALUES ('$pId', '$sessionDate', '$lastName', '$firstName', '$middleName')";
+                    $sql4 = "INSERT INTO reports (pId, date, lastName, firstName, middleName, ward) VALUES ('$pId', '$sessionDate', '$lastName', '$firstName', '$middleName', '$ward')";
                     if (mysqli_query($conn, $sql4)) {
 
                         header('Location: searchList.php?uId=' . $pId . '');

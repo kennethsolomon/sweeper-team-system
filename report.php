@@ -78,59 +78,90 @@
                             $month = $_GET['month'];
                             $year = $_GET['year'];
                             $pId = $_GET['pId'];
+                            $ward = $_GET['ward'];
                             $monthAndYear = $year . '-' . $month;
 
-                            $sqlName = "SELECT * FROM reports WHERE SUBSTRING(date, 1,7) ='$monthAndYear'";
-                            $resultName = mysqli_query($conn, $sqlName);
+                            $sql = "SELECT * FROM reports WHERE SUBSTRING(date, 1,7) ='$monthAndYear' AND ward='$ward'";
+                            $result = mysqli_query($conn, $sql);
 
-                            if (mysqli_num_rows($resultName) > 0) {
-                                while ($rowName = mysqli_fetch_assoc($resultName)) {
-                                    $pId = $rowName['pId'];
-                                    $day1 = $rowName['day01'];
-                                    $day2 = $rowName['day02'];
-                                    $day28 = $rowName['day28'];
-                                    $day29 = $rowName['day29'];
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
+                                    $pId = $row['pId'];
+                                    $lastName = $row['lastName'];
+                                    $firstName = $row['firstName'];
+                                    $middleName = $row['middleName'];
+                                    $day01 = $row['day01'];
+                                    $day02 = $row['day02'];
+                                    $day03 = $row['day03'];
+                                    $day04 = $row['day04'];
+                                    $day05 = $row['day05'];
+                                    $day06 = $row['day06'];
+                                    $day07 = $row['day07'];
+                                    $day08 = $row['day08'];
+                                    $day09 = $row['day09'];
+                                    $day10 = $row['day10'];
+                                    $day11 = $row['day11'];
+                                    $day12 = $row['day12'];
+                                    $day13 = $row['day13'];
+                                    $day14 = $row['day14'];
+                                    $day15 = $row['day15'];
+                                    $day16 = $row['day16'];
+                                    $day17 = $row['day17'];
+                                    $day18 = $row['day18'];
+                                    $day19 = $row['day19'];
+                                    $day20 = $row['day20'];
+                                    $day21 = $row['day21'];
+                                    $day22 = $row['day22'];
+                                    $day23 = $row['day23'];
+                                    $day24 = $row['day24'];
+                                    $day25 = $row['day25'];
+                                    $day26 = $row['day26'];
+                                    $day27 = $row['day27'];
+                                    $day28 = $row['day28'];
+                                    $day29 = $row['day29'];
+                                    $day30 = $row['day30'];
+                                    $day31 = $row['day31'];
 
                                     echo '
                                     <tr>
-                                        <td>' . $pId . '</td>
-                                        <td>' . $day1 . '</td>
+                                        <td>' . $lastName . ',' . $firstName . ' ' . $middleName . '</td>
+                                        <td>' . $day01 . '</td>
+                                        <td>' . $day02 . '</td>
+                                        <td>' . $day03 . '</td>
+                                        <td>' . $day04 . '</td>
+
+                                        <td>' . $day05 . '</td>
+                                        <td>' . $day06 . '</td>
+                                        <td>' . $day07 . '</td>
+                                        <td>' . $day08 . '</td>
+                                        <td>' . $day09 . '</td>
+                                        
+                                        <td>' . $day10 . '</td>
+                                        <td>' . $day11 . '</td>
+                                        <td>' . $day12 . '</td>
+                                        <td>' . $day13 . '</td>
+                                        <td>' . $day14 . '</td>
+
+                                        <td>' . $day15 . '</td>
+                                        <td>' . $day16 . '</td>
+                                        <td>' . $day17 . '</td>
+                                        <td>' . $day18 . '</td>
+                                        <td>' . $day19 . '</td>
+
+                                        <td>' . $day20 . '</td>
+                                        <td>' . $day21 . '</td>
+                                        <td>' . $day22 . '</td>
+                                        <td>' . $day23 . '</td>
+                                        <td>' . $day24 . '</td>
+
+                                        <td>' . $day25 . '</td>
+                                        <td>' . $day26 . '</td>
+                                        <td>' . $day27 . '</td>
                                         <td>' . $day28 . '</td>
                                         <td>' . $day29 . '</td>
-                                        <td></td>
 
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-
-                                        <td></td>
-                                        <td></td>
+                                        <td>' . $day30 . '</td>
+                                        <td>' . $day31 . '</td>
                                         <td></td>
                                     </tr>
                                     ';

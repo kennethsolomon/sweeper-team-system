@@ -18,10 +18,10 @@ $(document).ready(function () {
       $("#show-list").html("");
     }
   });
-  $(document).on("click", "#searchList", function () {
-    $("#search").val($(this).text());
-    $("#show-list").html("");
-  });
+  // $(document).on("click", "#searchList", function () {
+  //   $("#search").val($(this).text());
+  //   $("#show-list").html("");
+  // });
 
   // save comment to database
   $(document).on("click", "#saveBtn", function () {

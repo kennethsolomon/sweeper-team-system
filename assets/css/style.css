@@ -1,2 +1,8 @@
 .centered { vertical-align:middle; text-align:center; }
 .centered img { display:block; margin:0 auto; }
+
+@media print {
+    .reportsButton {
+      display: none;
+    }
+  }

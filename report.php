@@ -28,9 +28,9 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12">
-                        <a href="index.php" type="submit" name="generateReportBtn" class="btn btn-danger btn-fill mt-2">Back</a>
-                        <button type="submit" name="generateReportBtn" data-toggle="modal" data-target="#generateReportsModal" class="btn btn-info btn-fill mt-2">Print</button>
+                    <div class="col-md-12 reportsButton">
+                        <a href="index.php" type="submit" class="btn btn-danger btn-fill mt-2 .no-print">Back</a>
+                        <button type="submit" data-toggle="modal" data-target="#generateReportsModal" class="btn btn-info btn-fill mt-2 .no-print" onclick="window.print();return false;">Print</button>
                     </div>
                 </div>
                 <!-- End Row -->

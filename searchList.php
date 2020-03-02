@@ -76,6 +76,21 @@
                 ';
                 echo $addSessionSuccessfully;
             }
+            if (isset($_GET['updateSession'])) {
+                $addSessionSuccessfully = '
+                <script>
+                window.setTimeout(function() {
+                    $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
+                        $(this).remove(); 
+                    });
+                    }, 3000);
+                </script>
+                <div id="alert_message" class="alert alert-info text-center">
+                    Session Update Successfully!
+                </div>
+                ';
+                echo $addSessionSuccessfully;
+            }
             ?>
 
             <!-- Display Area -->

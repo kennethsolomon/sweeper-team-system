@@ -37,7 +37,7 @@
                         <div class="row">
                             <div class="col-md-12 pl-1">
                                 <div class="form-group">
-                                    <input id="dateOfBirth" name="dateOfBirth" type="date" class="form-control" placeholder="Last Name" value="">
+                                    <input id="dateOfBirth" name="dateOfBirth" type="hidden" class="form-control" placeholder="Last Name" value="">
                                 </div>
                             </div>
                         </div>

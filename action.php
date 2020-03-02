@@ -2787,7 +2787,7 @@ if (isset($_POST['addSessionBtn'])) {
             $sql2 = "SELECT * FROM reports WHERE SUBSTRING(date, 1,7) ='$monthAndYear' AND pId = '$pId'";
             $result2 = mysqli_query($conn, $sql2);
             if (mysqli_num_rows($result2) > 0) {
-                header('Location: searchList.php?uId=' . $pId . '');
+                header('Location: searchList.php?uId=' . $pId . '&addSession=1');
             } else {
 
                 $sql3 = "SELECT * FROM patient WHERE uId = '$pId'";
@@ -2802,7 +2802,7 @@ if (isset($_POST['addSessionBtn'])) {
                     $sql4 = "INSERT INTO reports (pId, date, lastName, firstName, middleName, ward) VALUES ('$pId', '$sessionDate', '$lastName', '$firstName', '$middleName', '$ward')";
                     if (mysqli_query($conn, $sql4)) {
 
-                        header('Location: searchList.php?uId=' . $pId . '');
+                        header('Location: searchList.php?uId=' . $pId . '&addSession=1');
                     }
                 }
             }

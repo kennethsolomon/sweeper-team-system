@@ -28,6 +28,12 @@ if (isset($_POST['save'])) {
   $middleName = $_POST['middleName'];
   $dateOfBirth = $_POST['dateOfBirth'];
   $ward = $_POST['ward'];
+  $Breakfast = $_POST['ward'];
+  $Lunch = $_POST['ward'];
+  $Dinner = $_POST['ward'];
+  $Npo = $_POST['ward'];
+  $Gl = $_POST['ward'];
+  $sessionDate = $_POST['ward'];
 
   $queryAlreadyExist = "SELECT * FROM patient WHERE lastName='$lastName' AND firstName='$firstName' and dateOfBirth='$dateOfBirth'";
   $resultAlreadyExist = mysqli_query($conn, $queryAlreadyExist);
@@ -49,19 +55,22 @@ if (isset($_POST['save'])) {
   } else {
     $sql = "INSERT INTO patient (uId, lastName, firstName, middleName, dateOfBirth, ward) VALUES ('{$uId}', '{$lastName}', '{$firstName}', '{$middleName}', '{$dateOfBirth}', '{$ward}')";
     if (mysqli_query($conn, $sql)) {
-      $saved_user = '
-            <script>
-            window.setTimeout(function() {
-                $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
-                  $(this).remove(); 
-                });
-              }, 3000);
-            </script>
-            <div id="alert_message" class="alert alert-info text-center">
-              Succesfully Added a new Patient!
-            </div>
-            ';
-      echo $saved_user;
+      $sql2 = "INSERT INTO patientsubsistence (pId, date, breakfast, lunch, dinner, npo, gl) VALUES ('{$uId}', '{$lastName}', '{$firstName}', '{$middleName}', '{$dateOfBirth}', '{$ward}')";
+      if (mysqli_query($conn, $sql2)) {
+        $saved_user = '
+        <script>
+        window.setTimeout(function() {
+            $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
+              $(this).remove(); 
+            });
+          }, 3000);
+        </script>
+        <div id="alert_message" class="alert alert-info text-center">
+          Succesfully Added a new Patient!
+        </div>
+        ';
+        echo $saved_user;
+      }
     } else {
       echo "Error: " . mysqli_error($conn);
     }

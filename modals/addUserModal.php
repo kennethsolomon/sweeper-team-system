@@ -42,6 +42,45 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-md-4 pl-1">
+                                <div class="form-group">
+                                    <input name="Breakfast" id="Breakfast" type="checkbox" class="form-group-input">
+                                    <label class="form-control" for="Breakfast">Breakfast</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 pl-1">
+                                <div class="form-group">
+                                    <input name="Lunch" id="Lunch" type="checkbox" class="form-group-input">
+                                    <label class="form-control" for="Lunch">Lunch</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4 pl-1">
+                                <div class="form-group">
+                                    <input name="Dinner" id="Dinner" type="checkbox" class="form-group-input">
+                                    <label class="form-control" for="Dinner">Dinner</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 pl-1">
+                                <div class="form-group">
+                                    <input name="Npo" id="Npo" type="checkbox" class="form-group-input">
+                                    <label class="form-control" for="Npo">NPO</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 pl-1">
+                                <div class="form-group">
+                                    <input name="Gl" id="Gl" type="checkbox" class="form-group-input">
+                                    <label class="form-control" for="Gl">GL</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pl-1">
+                                <div class="form-group">
+                                    <input id="sessionDate" name="sessionDate" type="date" class="form-control" value="<?php echo date('Y-m-d'); ?>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-6 pr-1">
                                 <div class="form-group">
                                     <label>Wards</label>

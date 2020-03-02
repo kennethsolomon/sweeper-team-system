@@ -35,7 +35,13 @@ $(document).ready(function() {
     var firstName = $("#firstName").val();
     var middleName = $("#middleName").val();
     var dateOfBirth = $("#dateOfBirth").val();
-    var ward = $("#ward").val();
+
+    var Breakfast = $("#Breakfast").val();
+    var Lunch = $("#Lunch").val();
+    var Dinner = $("#Dinner").val();
+    var Npo = $("#Npo").val();
+    var Gl = $("#Gl").val();
+    var sessionDate = $("#sessionDate").val();
 
     if (
       lastName == "" ||
@@ -68,7 +74,13 @@ $(document).ready(function() {
           firstName: firstName,
           middleName: middleName,
           dateOfBirth: dateOfBirth,
-          ward: ward
+          ward: ward,
+          Breakfast: Breakfast,
+          Lunch: Lunch,
+          Dinner: Dinner,
+          Npo: Npo,
+          Gl: Gl,
+          sessionDate: sessionDate
         },
         success: function(response) {
           $("#lastName").val("");
@@ -76,6 +88,12 @@ $(document).ready(function() {
           $("#middleName").val("");
           // $("#dateOfBirth").val("");
           $("#ward").val("");
+          $("#Breakfast").val("");
+          $("#Lunch").val("");
+          $("#Dinner").val("");
+          $("#Npo").val("");
+          $("#Gl").val("");
+          $("#sessionDate").val("");
 
           $("#display_area").append(response);
         }

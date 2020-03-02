@@ -12,7 +12,7 @@ if (isset($_POST['searchText'])) {
 
   if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-      echo ' <a href="searchList.php?uId=' . $row['uId'] . '" id="searchList" class="list-group-item list-group-item-action border-1">' . $row['lastName'] .  ', ' . $row['firstName'] . ' ' . $row['middleName'] . ' | Birthdate: ' . $row['dateOfBirth'] . '</a>';
+      echo ' <a href="searchList.php?uId=' . $row['uId'] . '" id="searchList" class="list-group-item list-group-item-action border-1">' . $row['lastName'] .  ', ' . $row['firstName'] . ' ' . $row['middleName'] . '</a>';
     }
   } else {
     echo ' <a href="#" class="list-group-item list-group-item-action border-1">No Result</a>';
@@ -26,16 +26,15 @@ if (isset($_POST['save'])) {
   $lastName = $_POST['lastName'];
   $firstName = $_POST['firstName'];
   $middleName = $_POST['middleName'];
-  $dateOfBirth = $_POST['dateOfBirth'];
   $ward = $_POST['ward'];
-  $Breakfast = $_POST['ward'];
-  $Lunch = $_POST['ward'];
-  $Dinner = $_POST['ward'];
-  $Npo = $_POST['ward'];
-  $Gl = $_POST['ward'];
-  $sessionDate = $_POST['ward'];
+  $breakfastModal = $_POST['breakfastModal'];
+  $lunchModal = $_POST['lunchModal'];
+  $dinnerModal = $_POST['dinnerModal'];
+  $npoModal = $_POST['npoModal'];
+  $glModal = $_POST['glModal'];
+  $sessionDateModal = $_POST['sessionDateModal'];
 
-  $queryAlreadyExist = "SELECT * FROM patient WHERE lastName='$lastName' AND firstName='$firstName' and dateOfBirth='$dateOfBirth'";
+  $queryAlreadyExist = "SELECT * FROM patient WHERE lastName='$lastName' AND firstName='$firstName' AND middleName='$middleName'";
   $resultAlreadyExist = mysqli_query($conn, $queryAlreadyExist);
 
   if (mysqli_num_rows($resultAlreadyExist) > 0) {
@@ -53,9 +52,11 @@ if (isset($_POST['save'])) {
         ';
     echo $alreadyExist;
   } else {
-    $sql = "INSERT INTO patient (uId, lastName, firstName, middleName, dateOfBirth, ward) VALUES ('{$uId}', '{$lastName}', '{$firstName}', '{$middleName}', '{$dateOfBirth}', '{$ward}')";
+    $sql = "INSERT INTO patient (uId, lastName, firstName, middleName, ward) 
+              VALUES ('{$uId}', '{$lastName}', '{$firstName}', '{$middleName}', '{$ward}')";
     if (mysqli_query($conn, $sql)) {
-      $sql2 = "INSERT INTO patientsubsistence (pId, date, breakfast, lunch, dinner, npo, gl) VALUES ('{$uId}', '{$lastName}', '{$firstName}', '{$middleName}', '{$dateOfBirth}', '{$ward}')";
+      $sql2 = "INSERT INTO patientsubsistence (pId, date, breakfast, lunch, dinner, npo, gl) 
+                VALUES ('{$uId}', '{$sessionDateModal}', '{$breakfastModal}', '{$lunchModal}', '{$dinnerModal}', '{$npoModal}', '{$glModal}')";
       if (mysqli_query($conn, $sql2)) {
         $saved_user = '
         <script>

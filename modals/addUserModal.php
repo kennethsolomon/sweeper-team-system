@@ -35,48 +35,41 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12 pl-1">
-                                <div class="form-group">
-                                    <input id="dateOfBirth" name="dateOfBirth" type="hidden" class="form-control" placeholder="Last Name" value="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div class="col-md-4 pl-1">
                                 <div class="form-group">
-                                    <input name="Breakfast" id="Breakfast" type="checkbox" class="form-group-input">
-                                    <label class="form-control" for="Breakfast">Breakfast</label>
+                                    <input name="breakfastModal" id="breakfastModal" type="checkbox" class="form-group-input">
+                                    <label class="form-control" for="breakfastModal">Breakfast</label>
                                 </div>
                             </div>
                             <div class="col-md-4 pl-1">
                                 <div class="form-group">
-                                    <input name="Lunch" id="Lunch" type="checkbox" class="form-group-input">
-                                    <label class="form-control" for="Lunch">Lunch</label>
+                                    <input name="lunchModal" id="lunchModal" type="checkbox" class="form-group-input">
+                                    <label class="form-control" for="lunchModal">Lunch</label>
                                 </div>
                             </div>
                             <div class="col-md-4 pl-1">
                                 <div class="form-group">
-                                    <input name="Dinner" id="Dinner" type="checkbox" class="form-group-input">
-                                    <label class="form-control" for="Dinner">Dinner</label>
+                                    <input name="dinnerModal" id="dinnerModal" type="checkbox" class="form-group-input">
+                                    <label class="form-control" for="dinnerModal">Dinner</label>
                                 </div>
                             </div>
                             <div class="col-md-6 pl-1">
                                 <div class="form-group">
-                                    <input name="Npo" id="Npo" type="checkbox" class="form-group-input">
-                                    <label class="form-control" for="Npo">NPO</label>
+                                    <input name="npoModal" id="npoModal" type="checkbox" class="form-group-input">
+                                    <label class="form-control" for="npoModal">NPO</label>
                                 </div>
                             </div>
                             <div class="col-md-6 pl-1">
                                 <div class="form-group">
-                                    <input name="Gl" id="Gl" type="checkbox" class="form-group-input">
-                                    <label class="form-control" for="Gl">GL</label>
+                                    <input name="glModal" id="glModal" type="checkbox" class="form-group-input">
+                                    <label class="form-control" for="glModal">GL</label>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 pl-1">
                                 <div class="form-group">
-                                    <input id="sessionDate" name="sessionDate" type="date" class="form-control" value="<?php echo date('Y-m-d'); ?>">
+                                    <input id="sessionDateModal" name="sessionDateModal" type="date" class="form-control" value="<?php echo date('Y-m-d'); ?>">
                                 </div>
                             </div>
                         </div>
@@ -95,16 +88,11 @@
                             <div class="col-md-6 pl-1 mt-5">
                                 <div class="form-group">
                                     <button type="submit" id="saveBtn" class="btn btn-info btn-fill pull-right">Save Patient</button>
-                                    <div class="clearfix"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-link btn-simple"></button>
-                <button type="button" class="btn btn-link btn-simple" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>

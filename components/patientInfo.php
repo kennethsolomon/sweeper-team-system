@@ -31,13 +31,7 @@ if (mysqli_num_rows($result) > 0) {
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 pr-1">
-                <div class="form-group">
-                    <label>Date of Birth</label>
-                    <input type="date" class="form-control" placeholder="Date of Birth" name="dateOfBirth" id="dateOfBirth" value="' . $row['dateOfBirth'] . '" required>
-                </div>
-            </div>
-            <div class="col-md-6 pl-1">
+            <div class="col-md-4 pl-1">
                 <div class="form-group">
                     <label>Ward</label>
                     <select id="ward" name="ward" class="form-control" required>
@@ -49,6 +43,11 @@ if (mysqli_num_rows($result) > 0) {
                     </select>
                 </div>
             </div>
+            <div class="col-md-8 pr-1">
+                <div class="form-group">
+                </div>
+            </div>
+            
         </div>
 
         <button type="submit" name="updatePatientBtn" class="btn btn-info btn-fill pull-right ml-3">Update Patient Info</button>

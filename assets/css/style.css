@@ -5,10 +5,16 @@
     .reportsButton {
       display: none;
     }
+    .fontSize{
+      font-size: small;
+    }
   }
 
   tfoot input {
     width: 100%;
     padding: 3px;
     box-sizing: border-box;
+}
+.modal-dialog{
+  margin: -15vh auto 0px auto;
 }

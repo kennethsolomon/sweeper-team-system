@@ -125,7 +125,7 @@
                 </div>
 
 
-                <div class="container">
+                <div class="container" id="patientTable">
                     <center>
                         <h2>Patient Session Search:</h2>
                     </center>
@@ -136,7 +136,6 @@
                                 <thead>
                                     <tr>
                                         <th>Full Name</th>
-                                        <th>Date Of Birth</th>
                                         <th>Ward</th>
                                         <th>Session Date</th>
                                         <th>Breakfast</th>
@@ -171,14 +170,12 @@
                                                     $firstName = $row2['firstName'];
                                                     $middleName = $row2['middleName'];
                                                     $ward = $row2['ward'];
-                                                    $dateOfBirth = $row2['dateOfBirth'];
                                                 }
                                             }
 
                                             echo '
                                                 <tr>
                                                 <td>' . $lastName . ',' . $firstName . ' ' . $middleName . '</td>
-                                                <td>' . $dateOfBirth . '</td>
                                                 <td>' . $ward . '</td>
                                                 <td>' . $date . '</td>
                                                 <td>' . $breakfast . '</td>
@@ -196,7 +193,6 @@
                                 <tfoot>
                                     <tr>
                                         <th>Full Name</th>
-                                        <th>Date Of Birth</th>
                                         <th>Ward</th>
                                         <th>Session Date</th>
                                         <th>Breakfast</th>

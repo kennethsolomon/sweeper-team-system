@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // search patient from database
-  $("#search").keyup(function() {
+  $("#search").keyup(function () {
     const searchText = $(this).val();
     if (searchText != "") {
       $.ajax({
@@ -9,7 +9,7 @@ $(document).ready(function() {
         data: {
           searchText: searchText
         },
-        success: function(response) {
+        success: function (response) {
           $("#show-list").html(response);
         }
       });
@@ -23,7 +23,7 @@ $(document).ready(function() {
   // });
 
   // save comment to database
-  $(document).on("click", "#saveBtn", function() {
+  $(document).on("click", "#saveBtn", function () {
     const generatedId =
       Date.now().toString(36) +
       Math.random()
@@ -34,20 +34,19 @@ $(document).ready(function() {
     var lastName = $("#lastName").val();
     var firstName = $("#firstName").val();
     var middleName = $("#middleName").val();
-    var dateOfBirth = $("#dateOfBirth").val();
+    var ward = $("#ward").val();
 
-    var Breakfast = $("#Breakfast").val();
-    var Lunch = $("#Lunch").val();
-    var Dinner = $("#Dinner").val();
-    var Npo = $("#Npo").val();
-    var Gl = $("#Gl").val();
-    var sessionDate = $("#sessionDate").val();
+    var breakfastModal = $("#breakfastModal:checked").val();
+    var lunchModal = $("#lunchModal:checked").val();
+    var dinnerModal = $("#dinnerModal:checked").val();
+    var npoModal = $("#npoModal:checked").val();
+    var glModal = $("#glModal:checked").val();
+    var sessionDateModal = $("#sessionDateModal").val();
 
     if (
       lastName == "" ||
       firstName == "" ||
       middleName == "" ||
-      // dateOfBirth == "" ||
       ward == ""
     ) {
       const emptyFields =
@@ -55,10 +54,10 @@ $(document).ready(function() {
         "You need to fill all the fields!" +
         "</div>";
 
-      window.setTimeout(function() {
+      window.setTimeout(function () {
         $("#alert_message")
           .fadeTo(500, 0)
-          .slideUp(500, function() {
+          .slideUp(500, function () {
             $(this).remove();
           });
       }, 3000);
@@ -73,27 +72,24 @@ $(document).ready(function() {
           lastName: lastName,
           firstName: firstName,
           middleName: middleName,
-          dateOfBirth: dateOfBirth,
           ward: ward,
-          Breakfast: Breakfast,
-          Lunch: Lunch,
-          Dinner: Dinner,
-          Npo: Npo,
-          Gl: Gl,
-          sessionDate: sessionDate
+          breakfastModal: breakfastModal,
+          lunchModal: lunchModal,
+          dinnerModal: dinnerModal,
+          npoModal: npoModal,
+          glModal: glModal,
+          sessionDateModal: sessionDateModal
         },
-        success: function(response) {
+        success: function (response) {
           $("#lastName").val("");
           $("#firstName").val("");
           $("#middleName").val("");
-          // $("#dateOfBirth").val("");
-          $("#ward").val("");
-          $("#Breakfast").val("");
-          $("#Lunch").val("");
-          $("#Dinner").val("");
-          $("#Npo").val("");
-          $("#Gl").val("");
-          $("#sessionDate").val("");
+
+          $("#breakfastModal").prop("checked", false);
+          $("#lunchModal").prop("checked", false);
+          $("#dinnerModal").prop("checked", false);
+          $("#npoModal").prop("checked", false);
+          $("#glModal").prop("checked", false);
 
           $("#display_area").append(response);
         }
@@ -102,7 +98,7 @@ $(document).ready(function() {
   });
 
   // delete from database
-  $(document).on("click", ".delete", function() {
+  $(document).on("click", ".delete", function () {
     var id = $(this).data("id");
     $clicked_btn = $(this);
     $.ajax({
@@ -112,7 +108,7 @@ $(document).ready(function() {
         delete: 1,
         id: id
       },
-      success: function(response) {
+      success: function (response) {
         // remove the deleted comment
         $clicked_btn.parent().remove();
         $("#name").val("");
@@ -122,7 +118,7 @@ $(document).ready(function() {
   });
   var edit_id;
   var $edit_comment;
-  $(document).on("click", ".edit", function() {
+  $(document).on("click", ".edit", function () {
     edit_id = $(this).data("id");
     $edit_comment = $(this).parent();
     // grab the comment to be editted

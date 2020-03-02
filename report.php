@@ -133,7 +133,7 @@
 
                                     echo '
                                     <tr>
-                                        <td>' . $lastName . ',' . $firstName . ' ' . $middleName . '</td>
+                                        <td class="fontSize">' . $lastName . ',' . $firstName . ' ' . $middleName . '</td>
                                         <td class="centered"><img src="assets/img/' . $day01 . '.png" alt="report" height="30" width="30"></td>
                                         <td class="centered"><img src="assets/img/' . $day02 . '.png" alt="report" height="30" width="30"></td>
                                         <td class="centered"><img src="assets/img/' . $day03 . '.png" alt="report" height="30" width="30"></td>

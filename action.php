@@ -9,14 +9,12 @@ if (isset($_POST['updatePatientBtn'])) {
     $lastName = $_POST['lastName'];
     $firstName = $_POST['firstName'];
     $middleName = $_POST['middleName'];
-    $dateOfBirth = $_POST['dateOfBirth'];
     $ward = $_POST['ward'];
 
     $sql = "UPDATE patient SET 
       lastName='{$lastName}', 
       firstName='{$firstName}', 
       middleName='{$middleName}', 
-      dateOfBirth='{$dateOfBirth}', 
       ward='{$ward}' 
       WHERE uId='$pId'";
     if (mysqli_query($conn, $sql)) {
@@ -52,10 +50,7 @@ if (isset($_POST['updatePatientBtn'])) {
                 </div>
                 <div class="row">
                     <div class="col-md-6 pr-1">
-                        <div class="form-group">
-                            <label>Date of Birth</label>
-                            <input type="date" class="form-control" placeholder="Date of Birth" name="dateOfBirth" id="dateOfBirth" value="' . $dateOfBirth . '">
-                        </div>
+                        
                     </div>
                     <div class="col-md-6 pl-1">
                         <div class="form-group">

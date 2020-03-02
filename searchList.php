@@ -77,7 +77,7 @@
                 echo $addSessionSuccessfully;
             }
             if (isset($_GET['updateSession'])) {
-                $addSessionSuccessfully = '
+                $updateSessionSuccessfully = '
                 <script>
                 window.setTimeout(function() {
                     $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
@@ -89,7 +89,22 @@
                     Session Update Successfully!
                 </div>
                 ';
-                echo $addSessionSuccessfully;
+                echo $updateSessionSuccessfully;
+            }
+            if (isset($_GET['deleteSession'])) {
+                $deleteSessionSuccessfully = '
+                <script>
+                window.setTimeout(function() {
+                    $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
+                        $(this).remove(); 
+                    });
+                    }, 3000);
+                </script>
+                <div id="alert_message" class="alert alert-danger text-center">
+                    Session Deleted Successfully!
+                </div>
+                ';
+                echo $deleteSessionSuccessfully;
             }
             ?>
 
@@ -143,6 +158,7 @@
                                                     <th>Dinner</th>
                                                     <th>NPO</th>
                                                     <th>GL</th>
+                                                    <th>Delete</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -181,5 +197,11 @@
 <script src="./assets/js/demo.js"></script>
 
 <script src="script.js"></script>
+
+<script>
+    $('#deleteSessionBtn').click(function() {
+        return confirm('Are you sure want to delete this session?');
+    });
+</script>
 
 </html>

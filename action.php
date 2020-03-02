@@ -3,6 +3,19 @@ $conn = mysqli_connect('localhost', 'root', '', 'dietary');
 if (!$conn) {
     die('Connection failed ' . mysqli_error($conn));
 }
+if (isset($_GET['deleteSession'])) {
+    $pId = $_GET['uId'];
+    $sId = $_GET['id'];
+    $sql = "DELETE FROM patientsubsistence WHERE id=$sId";
+
+    if (mysqli_query($conn, $sql)) {
+        header("Location: searchList.php?uId=$pId&deleteSession=1");
+    } else {
+        echo "Error deleting record: " . mysqli_error($conn);
+    }
+}
+
+
 
 if (isset($_POST['updatePatientBtn'])) {
     $pId = $_POST['pId'];

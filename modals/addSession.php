@@ -46,6 +46,12 @@
                                         <label class="form-control" for="Gl">GL</label>
                                     </div>
                                 </div>
+                                <div class="col-md-6 pl-1">
+                                    <div class="form-group">
+                                        <input name="all" id="all" type="checkbox" class="form-group-input">
+                                        <label class="form-control" for="all">All</label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12 pl-1">

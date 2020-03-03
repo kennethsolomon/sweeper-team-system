@@ -25,14 +25,6 @@ if (mysqli_num_rows($result) > 0) {
             </div>
             <div class="col-md-4 pl-1">
                 <div class="form-group">
-                    <label>Middle Name</label>
-                    <input type="text" class="form-control" placeholder="Middle Name" name="middleName" id="middleName" value="' . $row['middleName'] . '" required>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 pl-1">
-                <div class="form-group">
                     <label>Ward</label>
                     <select id="ward" name="ward" class="form-control" required>
                         <option value="' . $row['ward'] . '">' . $row['ward'] . '</option>
@@ -41,6 +33,13 @@ if (mysqli_num_rows($result) > 0) {
                         <option value="OB">OB</option>
                         <option value="Rehy/ISO">Rehy/ISO</option>
                     </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 pl-1">
+                <div class="form-group">
+                    <input type="hidden" class="form-control" placeholder="Middle Name" name="middleName" id="middleName" value="' . $row['middleName'] . '" required>
                 </div>
             </div>
             <div class="col-md-8 pr-1">

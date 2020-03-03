@@ -30,7 +30,7 @@
                         <div class="row">
                             <div class="col-md-12 pl-1">
                                 <div class="form-group">
-                                    <input id="middleName" name="middleName" type="text" class="form-control" placeholder="Middle Name" value="">
+                                    <input id="middleName" name="middleName" type="hidden" class="form-control" placeholder="Middle Name" value="  ">
                                 </div>
                             </div>
                         </div>

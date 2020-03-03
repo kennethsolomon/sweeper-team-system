@@ -58,7 +58,9 @@ if (isset($_POST['save'])) {
       $sql2 = "INSERT INTO patientsubsistence (pId, date, breakfast, lunch, dinner, npo, gl) 
                 VALUES ('{$uId}', '{$sessionDateModal}', '{$breakfastModal}', '{$lunchModal}', '{$dinnerModal}', '{$npoModal}', '{$glModal}')";
       if (mysqli_query($conn, $sql2)) {
-        $saved_user = '
+        $sql3 = "INSERT INTO reports (pId, date, lastName, firstName, middleName, ward) VALUES ('$uId', '$sessionDateModal', '$lastName', '$firstName', '$middleName', '$ward')";
+        if (mysqli_query($conn, $sql3)) {
+          $saved_user = '
         <script>
         window.setTimeout(function() {
             $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
@@ -70,7 +72,8 @@ if (isset($_POST['save'])) {
           Succesfully Added a new Patient!
         </div>
         ';
-        echo $saved_user;
+          echo $saved_user;
+        }
       }
     } else {
       echo "Error: " . mysqli_error($conn);

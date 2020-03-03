@@ -111,7 +111,7 @@ $(document).ready(function() {
         success: function(response) {
           $("#lastName").val("");
           $("#firstName").val("");
-          $("#middleName").val("");
+          // $("#middleName").val("");
 
           $("#breakfastModal").prop("checked", false);
           $("#lunchModal").prop("checked", false);

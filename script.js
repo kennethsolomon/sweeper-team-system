@@ -43,6 +43,7 @@ $(document).ready(function() {
     var unDinnerModal = $("#dinnerModal").prop("checked");
     var unNpoModal = $("#npoModal").prop("checked");
     var unGlModal = $("#glModal").prop("checked");
+    var unAllModal = $("#allModal").prop("checked");
 
     if (!unBreakfastModal) {
       var breakfastModal = $("#breakfastModal").prop("checked", false)[0]
@@ -75,6 +76,11 @@ $(document).ready(function() {
     } else {
       var glModal = $("#glModal:checked").val();
     }
+    if (!unAllModal) {
+      var allModal = $("#allModal").prop("checked", false)[0].defaultValue;
+    } else {
+      var allModal = $("#allModal:checked").val();
+    }
 
     if (lastName == "" || firstName == "" || middleName == "" || ward == "") {
       const emptyFields =
@@ -106,6 +112,7 @@ $(document).ready(function() {
           dinnerModal: dinnerModal,
           npoModal: npoModal,
           glModal: glModal,
+          allModal: allModal,
           sessionDateModal: sessionDateModal
         },
         success: function(response) {
@@ -118,6 +125,7 @@ $(document).ready(function() {
           $("#dinnerModal").prop("checked", false);
           $("#npoModal").prop("checked", false);
           $("#glModal").prop("checked", false);
+          $("#allModal").prop("checked", false);
 
           $("#display_area").append(response);
         }

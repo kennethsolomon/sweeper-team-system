@@ -32,6 +32,7 @@ if (isset($_POST['save'])) {
   $dinnerModal = $_POST['dinnerModal'];
   $npoModal = $_POST['npoModal'];
   $glModal = $_POST['glModal'];
+  $allModal = $_POST['allModal'];
   $sessionDateModal = $_POST['sessionDateModal'];
 
   $queryAlreadyExist = "SELECT * FROM patient WHERE lastName='$lastName' AND firstName='$firstName' AND middleName='$middleName'";
@@ -55,8 +56,14 @@ if (isset($_POST['save'])) {
     $sql = "INSERT INTO patient (uId, lastName, firstName, middleName, ward) 
               VALUES ('{$uId}', '{$lastName}', '{$firstName}', '{$middleName}', '{$ward}')";
     if (mysqli_query($conn, $sql)) {
-      $sql2 = "INSERT INTO patientsubsistence (pId, date, breakfast, lunch, dinner, npo, gl) 
-                VALUES ('{$uId}', '{$sessionDateModal}', '{$breakfastModal}', '{$lunchModal}', '{$dinnerModal}', '{$npoModal}', '{$glModal}')";
+      if ($allModal == 'on') {
+        $sql2 = "INSERT INTO patientsubsistence (pId, date, breakfast, lunch, dinner, npo, gl) 
+        VALUES ('{$uId}', '{$sessionDateModal}', 'on', 'on', 'on', '{$npoModal}', '{$glModal}')";
+      } else {
+        $sql2 = "INSERT INTO patientsubsistence (pId, date, breakfast, lunch, dinner, npo, gl) 
+        VALUES ('{$uId}', '{$sessionDateModal}', '{$breakfastModal}', '{$lunchModal}', '{$dinnerModal}', '{$npoModal}', '{$glModal}')";
+      }
+
       if (mysqli_query($conn, $sql2)) {
         $sql3 = "INSERT INTO reports (pId, date, lastName, firstName, middleName, ward) VALUES ('$uId', '$sessionDateModal', '$lastName', '$firstName', '$middleName', '$ward')";
         if (mysqli_query($conn, $sql3)) {

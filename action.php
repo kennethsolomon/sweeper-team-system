@@ -3315,5 +3315,7 @@ if (isset($_GET['updateSession'])) {
                 }
             }
         }
+    } else {
+        header("Location: index.php");
     }
 }

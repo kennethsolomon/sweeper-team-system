@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 02, 2020 at 01:25 PM
+-- Generation Time: Mar 10, 2020 at 10:35 AM
 -- Server version: 10.4.12-MariaDB
 -- PHP Version: 7.4.3
 
@@ -38,6 +38,13 @@ CREATE TABLE `patient` (
   `createdAt` datetime(6) DEFAULT current_timestamp(6),
   `ward` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `patient`
+--
+
+INSERT INTO `patient` (`id`, `uId`, `lastName`, `firstName`, `middleName`, `dateOfBirth`, `createdAt`, `ward`) VALUES
+(123, 'k7hez719feqaxc8vu67', 'e', 'e', '  ', NULL, '2020-03-07 17:37:19.976640', 'General');
 
 -- --------------------------------------------------------
 
@@ -104,6 +111,13 @@ CREATE TABLE `reports` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `reports`
+--
+
+INSERT INTO `reports` (`id`, `pId`, `lastName`, `firstName`, `middleName`, `ward`, `date`, `day01`, `day02`, `day03`, `day04`, `day05`, `day06`, `day07`, `day08`, `day09`, `day10`, `day11`, `day12`, `day13`, `day14`, `day15`, `day16`, `day17`, `day18`, `day19`, `day20`, `day21`, `day22`, `day23`, `day24`, `day25`, `day26`, `day27`, `day28`, `day29`, `day30`, `day31`) VALUES
+(82, 'k7hez719feqaxc8vu67', 'e', 'e', '  ', 'General', '2020-03-07', NULL, NULL, NULL, NULL, NULL, NULL, 'l', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -133,19 +147,19 @@ ALTER TABLE `reports`
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=124;
 
 --
 -- AUTO_INCREMENT for table `patientsubsistence`
 --
 ALTER TABLE `patientsubsistence`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
 
 --
 -- AUTO_INCREMENT for table `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

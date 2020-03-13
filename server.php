@@ -7,7 +7,7 @@ if (!$conn) {
 //Search Patient
 if (isset($_POST['searchText'])) {
   $inpText = $_POST['searchText'];
-  $query = "SELECT * FROM patient WHERE lastName LIKE '%$inpText%'";
+  $query = "SELECT * FROM patient WHERE lastName LIKE '%$inpText%' OR firstName LIKE '%$inpText%'";
   $result = mysqli_query($conn, $query);
 
   if (mysqli_num_rows($result) > 0) {

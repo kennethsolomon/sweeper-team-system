@@ -70,7 +70,7 @@
                 </div>
             </nav>
             <!-- End Navbar -->
-            <div class="content">
+            <div class="container">
                 <div class="container-fluid">
 
                     <!-- Display Area -->

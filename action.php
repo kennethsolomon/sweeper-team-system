@@ -3221,8 +3221,7 @@ if (isset($_GET['updateSession'])) {
             $todayDate = 'day' . $getTodayDate;
             $listOfDayArray = array("day01", "day02", "day03", "day04", "day05", "day06", "day07", "day08", "day09", "day10", "day11", "day12", "day13", "day14", "day15", "day16", "day17", "day18", "day19", "day20", "day21", "day22", "day23", "day24", "day25", "day26", "day27", "day28", "day29", "day30", "day31");
             // Loop listOfDayArray
-            for ($listOfDay = 0; count($listOfDayArray) >= $listOfDay; $listOfDay++) {
-
+            for ($listOfDay = 0; count($listOfDayArray) > $listOfDay; $listOfDay++) {
                 //Breakfast Lunch Dinner
                 if ($breakfast == 'on' && $lunch == 'on' && $dinner == 'on') {
                     if ($listOfDayArray[$listOfDay] == $todayDate) {
@@ -3304,7 +3303,7 @@ if (isset($_GET['updateSession'])) {
                 //         }
                 //     }
                 // }
-                //Default
+                // //Default
                 else {
                     if ($listOfDayArray[$listOfDay] == $todayDate) {
                         $sql2 = "UPDATE reports SET $todayDate = NULL WHERE pId = '$pId' AND SUBSTRING(date, 1,7) ='$monthAndYear'";

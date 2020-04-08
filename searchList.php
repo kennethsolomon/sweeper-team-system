@@ -111,7 +111,7 @@
             <!-- Display Area -->
             <div id="display_area"></div>
 
-            <div class="content">
+            <div class="container">
                 <div class="container-fluid">
 
                     <!-- Modal -->

@@ -15,10 +15,10 @@
                     <form action="report.php" method="get">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-12 pl-1">
+                                <!-- <div class="col-md-12 pl-1">
                                     <div class="form-group">
                                         <input id="pId" name="pId" type="hidden" class="form-control" value="<?php echo $_GET['uId'] ?>">
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="row">

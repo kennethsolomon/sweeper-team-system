@@ -85,7 +85,7 @@
 
                             if (mysqli_num_rows($result) > 0) {
                                 while ($row = mysqli_fetch_assoc($result)) {
-                                   
+                                  
                                     $lastName = $row['lastName'];
                                     $firstName = $row['firstName'];
                                     $middleName = $row['middleName'];
@@ -132,45 +132,45 @@
                                     $moduloCountDay = $countDay % 3;
 
                                     echo '
-                                    <tr>
-                                        <td class="fontSize">' . $lastName . ',' . $firstName . ' ' . $middleName . '</td>
-                                        <td class="centered"><img src="assets/img/' . $day01 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day02 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day03 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day04 . '.png" alt="report" height="30" width="30"></td>
+                                    <tr ' . (($devideCount == '0/3') ? 'style="display:none"' : NULL) . '>
+                                        <td class="fontSize">' . (($lastName != NULL) ? $lastName : NULL) . ',' . (($firstName != NULL) ? $firstName : NULL) . ' ' . (($middleName != NULL) ? $middleName : NULL) . '</td>
+                                        <td class="centered"><img src="assets/img/' . (($day01 != NULL) ? $day01 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day02 != NULL) ? $day02 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day03 != NULL) ? $day03 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day04 != NULL) ? $day04 : NULL) . '.png" alt="report" height="30" width="30"></td>
     
-                                        <td class="centered"><img src="assets/img/' . $day05 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day06 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day07 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day08 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day09 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day05 != NULL) ? $day05 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day06 != NULL) ? $day06 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day07 != NULL) ? $day07 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day08 != NULL) ? $day08 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day09 != NULL) ? $day09 : NULL) . '.png" alt="report" height="30" width="30"></td>
                                         
-                                        <td class="centered"><img src="assets/img/' . $day10 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day11 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day12 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day13 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day14 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day10 != NULL) ? $day10 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day11 != NULL) ? $day11 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day12 != NULL) ? $day12 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day13 != NULL) ? $day13 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day14 != NULL) ? $day14 : NULL) . '.png" alt="report" height="30" width="30"></td>
 
-                                        <td class="centered"><img src="assets/img/' . $day15 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day16 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day17 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day18 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day19 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day15 != NULL) ? $day15 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day16 != NULL) ? $day16 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day17 != NULL) ? $day17 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day18 != NULL) ? $day18 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day19 != NULL) ? $day19 : NULL) . '.png" alt="report" height="30" width="30"></td>
 
-                                        <td class="centered"><img src="assets/img/' . $day20 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day21 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day22 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day23 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day24 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day20 != NULL) ? $day20 : NULL)  . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day21 != NULL) ? $day21 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day22 != NULL) ? $day22 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day23 != NULL) ? $day23 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day24 != NULL) ? $day24 : NULL) . '.png" alt="report" height="30" width="30"></td>
 
-                                        <td class="centered"><img src="assets/img/' . $day25 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day26 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day27 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day28 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day29 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day25 != NULL) ? $day25 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day26 != NULL) ? $day26 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day27 != NULL) ? $day27 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day28 != NULL) ? $day28 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day29 != NULL) ? $day29 : NULL) . '.png" alt="report" height="30" width="30"></td>
 
-                                        <td class="centered"><img src="assets/img/' . $day30 . '.png" alt="report" height="30" width="30"></td>
-                                        <td class="centered"><img src="assets/img/' . $day31 . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day30 != NULL) ? $day30 : NULL) . '.png" alt="report" height="30" width="30"></td>
+                                        <td class="centered"><img src="assets/img/' . (($day31 != NULL) ? $day31 : NULL) . '.png" alt="report" height="30" width="30"></td>
                                         <td class="centered">';
                                     if ($moduloCountDay > 0 && $devideCount != 0) {
                                         echo $devideCount . ' ';

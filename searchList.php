@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Dietary</title>
+    <title>Sweeper</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link href="./assets/css/font.css" rel="stylesheet" />
@@ -139,39 +139,6 @@
                             </div>
                         </div>
                         <!-- End of row -->
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card strpied-tabled-with-hover">
-                                    <div class="card-header ">
-                                        <h4 class="card-title">Patient’s Subsistence Report</h4>
-                                        <!-- <p class="card-category">Here is a subtitle for this table</p> -->
-                                        <button type="submit" data-toggle="modal" data-target="#sessionModal" class="btn btn-info btn-fill pull-right">Today Session</button>
-                                    </div>
-                                    <div class="card-body table-full-width table-responsive">
-                                        <table class="table table-hover table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>Date</th>
-                                                    <th>Breakfast</th>
-                                                    <th>Lunch</th>
-                                                    <th>Dinner</th>
-                                                    <th>NPO</th>
-                                                    <th>GL</th>
-                                                    <th>Delete</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <!-- Session List -->
-                                                <?php include_once './components/sessionList.php' ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
                     </div>
                 </div>
                 <?php include_once './components/footer.php' ?>

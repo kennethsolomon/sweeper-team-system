@@ -7,7 +7,7 @@
     <div class="sidebar-wrapper">
         <div class="logo">
             <a href="http://www.creative-tim.com" class="simple-text">
-                Dietary
+                Sweeper
             </a>
         </div>
         <ul class="nav">
@@ -26,10 +26,16 @@
             <li>
                 <a data-toggle="modal" data-target="#addUserModal" class="nav-link" href="#">
                     <i class="nc-icon nc-circle-09"></i>
-                    <p>Add User</p>
+                    <p>Add Person</p>
                 </a>
             </li>
             <li>
+                <a class="nav-link" href="action.php?exportData=1">
+                    <i class="nc-icon nc-paper-2"></i>
+                    <p>Export</p>
+                </a>
+            </li>
+            <!-- <li>
                 <a class="nav-link" href="action.php?updateSession=1">
                     <i class="nc-icon nc-paper-2"></i>
                     <p>Update Data</p>
@@ -40,7 +46,7 @@
                     <i class="nc-icon nc-notes"></i>
                     <p>Generate Reports</p>
                 </a>
-            </li>
+            </li> -->
             <!-- <li>
                 <a class="nav-link" href="./icons.html">
                     <i class="nc-icon nc-atom"></i>

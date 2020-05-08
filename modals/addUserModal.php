@@ -30,68 +30,81 @@
                         <div class="row">
                             <div class="col-md-12 pl-1">
                                 <div class="form-group">
-                                    <input id="middleName" name="middleName" type="hidden" class="form-control" placeholder="Middle Name" value="  ">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4 pl-1">
-                                <div class="form-group">
-                                    <input name="breakfastModal" id="breakfastModal" type="checkbox" class="form-group-input">
-                                    <label class="form-control" for="breakfastModal">Breakfast</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4 pl-1">
-                                <div class="form-group">
-                                    <input name="lunchModal" id="lunchModal" type="checkbox" class="form-group-input">
-                                    <label class="form-control" for="lunchModal">Lunch</label>
-                                </div>
-                            </div>
-                            <div class="col-md-4 pl-1">
-                                <div class="form-group">
-                                    <input name="dinnerModal" id="dinnerModal" type="checkbox" class="form-group-input">
-                                    <label class="form-control" for="dinnerModal">Dinner</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6 pl-1">
-                                <div class="form-group">
-                                    <input name="npoModal" id="npoModal" type="checkbox" class="form-group-input">
-                                    <label class="form-control" for="npoModal">NPO</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6 pl-1">
-                                <div class="form-group">
-                                    <input name="glModal" id="glModal" type="checkbox" class="form-group-input">
-                                    <label class="form-control" for="glModal">GL</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6 pl-1">
-                                <div class="form-group">
-                                    <input name="allModal" id="allModal" type="checkbox" class="form-group-input">
-                                    <label class="form-control" for="allModal">All</label>
+                                    <input id="middleName" name="middleName" type="text" class="form-control" placeholder="Middle Name" value="">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12 pl-1">
                                 <div class="form-group">
-                                    <input id="sessionDateModal" name="sessionDateModal" type="date" class="form-control" value="<?php echo date('Y-m-d'); ?>">
+                                    <input id="birthDate" name="birthDate" type="date" class="form-control" value="<?php echo date('Y-m-d'); ?>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pl-1">
+                                <div class="form-group">
+                                    <input id="age" name="age" type="number" class="form-control" placeholder="Age" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 pl-1">
+                                <div class="form-group">
+                                    <select id="sex" name="sex" class="form-control">
+                                        <option value="M">M</option>
+                                        <option value="F">F</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pl-1">
+                                <div class="form-group">
+                                    <input id="origin" name="origin" type="text" class="form-control" placeholder="Origin" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pl-1">
+                                <div class="form-group">
+                                    <input id="barangay" name="barangay" type="text" class="form-control" placeholder="Barangay" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pl-1">
+                                <div class="form-group">
+                                    <select id="municipality" name="municipality" class="form-control">
+                                        <option value=""></option>
+                                        <option value="Sorsogon City">Sorsogon City</option>
+                                        <option value="Barcelona">Barcelona</option>
+                                        <option value="Bulan">Bulan</option>
+                                        <option value="Bulusan">Bulusan</option>
+                                        <option value="Casiguran">Casiguran</option>
+                                        <option value="Castilla">Castilla</option>
+                                        <option value="Donsol">Donsol</option>
+                                        <option value="Gubat">Gubat</option>
+                                        <option value="Irosin">Irosin</option>
+                                        <option value="Juban">Juban</option>
+                                        <option value="Magallanes">Magallanes</option>
+                                        <option value="Matnog">Matnog</option>
+                                        <option value="Pilar">Pilar</option>
+                                        <option value="Prieto Diaz">Prieto Diaz</option>
+                                        <option value="Sta. Magdalena">Sta. Magdalena</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 pl-1">
+                                <div class="form-group">
+                                    <input id="contactNumber" name="contactNumber" type="text" class="form-control" placeholder="Contact Number" value="">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 pr-1">
-                                <div class="form-group">
-                                    <label>Wards</label>
-                                    <select id="ward" class="form-control">
-                                        <option value="General">General</option>
-                                        <option value="Pedia/Surgery">Pedia/Surgery</option>
-                                        <option value="OB">OB</option>
-                                        <option value="Rehy/ISO">Rehy/ISO</option>
-                                    </select>
-                                </div>
                             </div>
-                            <div class="col-md-6 pl-1 mt-5">
+                            <div class="col-md-6 pl-1">
                                 <div class="form-group">
                                     <button type="submit" id="saveBtn" class="btn btn-info btn-fill pull-right">Save Patient</button>
                                 </div>

@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Dietary</title>
+    <title>Sweeper</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
@@ -136,53 +136,38 @@
                                 <thead>
                                     <tr>
                                         <th>Full Name</th>
-                                        <th>Ward</th>
-                                        <th>Session Date</th>
-                                        <th>Breakfast</th>
-                                        <th>Lunch</th>
-                                        <th>Dinner</th>
-                                        <th>NPO</th>
-                                        <th>GL</th>
+                                        <th>Age</th>
+                                        <th>Sex</th>
+                                        <th>Origin</th>
+                                        <th>Municipality</th>
+                                        <th>Barangay</th>
                                     </tr>
                                 </thead>
                                 <tbody>
 
                                     <?php
-                                    $sql = "SELECT * FROM patientsubsistence";
+                                    $sql = "SELECT * FROM patient";
                                     $result = mysqli_query($conn, $sql);
 
                                     if (mysqli_num_rows($result) > 0) {
                                         while ($row = mysqli_fetch_assoc($result)) {
-                                            $pId = $row['pId'];
-                                            $date = $row['date'];
-                                            $breakfast = $row['breakfast'];
-                                            $lunch = $row['lunch'];
-                                            $dinner = $row['dinner'];
-                                            $npo = $row['npo'];
-                                            $gl = $row['gl'];
-
-                                            $sql2 = "SELECT * FROM patient where uId = '$pId' ";
-                                            $result2 = mysqli_query($conn, $sql2);
-
-                                            if (mysqli_num_rows($result2) > 0) {
-                                                while ($row2 = mysqli_fetch_assoc($result2)) {
-                                                    $lastName = $row2['lastName'];
-                                                    $firstName = $row2['firstName'];
-                                                    $middleName = $row2['middleName'];
-                                                    $ward = $row2['ward'];
-                                                }
-                                            }
+                                            $lastName = $row['lastName'];
+                                            $firstName = $row['firstName'];
+                                            $middleName = $row['middleName'];
+                                            $age = $row['age'];
+                                            $sex = $row['sex'];
+                                            $origin = $row['origin'];
+                                            $municipality = $row['municipality'];
+                                            $barangay = $row['barangay'];
 
                                             echo '
                                                 <tr>
                                                 <td>' . $lastName . ',' . $firstName . ' ' . $middleName . '</td>
-                                                <td>' . $ward . '</td>
-                                                <td>' . $date . '</td>
-                                                <td>' . $breakfast . '</td>
-                                                <td>' . $lunch . '</td>
-                                                <td>' . $dinner . '</td>
-                                                <td>' . $npo . '</td>
-                                                <td>' . $gl . '</td>
+                                                <td>' . $age . '</td>
+                                                <td>' . $sex . '</td>
+                                                <td>' . $origin . '</td>
+                                                <td>' . $municipality . '</td>
+                                                <td>' . $barangay . '</td>
                                                 </tr>
                                                 ';
                                         }
@@ -193,13 +178,11 @@
                                 <tfoot>
                                     <tr>
                                         <th>Full Name</th>
-                                        <th>Ward</th>
-                                        <th>Session Date</th>
-                                        <th>Breakfast</th>
-                                        <th>Lunch</th>
-                                        <th>Dinner</th>
-                                        <th>NPO</th>
-                                        <th>GL</th>
+                                        <th>Age</th>
+                                        <th>Sex</th>
+                                        <th>Origin</th>
+                                        <th>Municipality</th>
+                                        <th>Barangay</th>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -312,8 +295,8 @@
 <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
 <script src="./assets/js/demo.js"></script>
 
-<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+<script src="./assets/js/plugins/jquery.dataTables.min.js"></script>
+<script src="./assets/js/plugins/dataTables.bootstrap4.min.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function() {

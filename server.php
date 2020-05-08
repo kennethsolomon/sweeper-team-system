@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'dietary');
+$conn = mysqli_connect('localhost', 'root', '', 'sweeper');
 if (!$conn) {
   die('Connection failed ' . mysqli_error($conn));
 }
@@ -12,7 +12,7 @@ if (isset($_POST['searchText'])) {
 
   if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
-      echo ' <a href="searchList.php?uId=' . $row['uId'] . '" id="searchList" class="list-group-item list-group-item-action border-1">' . $row['lastName'] .  ', ' . $row['firstName'] . ' ' . $row['middleName'] . '</a>';
+      echo ' <a href="searchList.php?id=' . $row['id'] . '" id="searchList" class="list-group-item list-group-item-action border-1">' . $row['lastName'] .  ', ' . $row['firstName'] . ' ' . $row['middleName'] . '</a>';
     }
   } else {
     echo ' <a href="#" class="list-group-item list-group-item-action border-1">No Result</a>';
@@ -22,52 +22,22 @@ if (isset($_POST['searchText'])) {
 //Save Patient Info
 if (isset($_POST['save'])) {
 
-  $uId = $_POST['uId'];
   $lastName = $_POST['lastName'];
   $firstName = $_POST['firstName'];
   $middleName = $_POST['middleName'];
-  $ward = $_POST['ward'];
-  $breakfastModal = $_POST['breakfastModal'];
-  $lunchModal = $_POST['lunchModal'];
-  $dinnerModal = $_POST['dinnerModal'];
-  $npoModal = $_POST['npoModal'];
-  $glModal = $_POST['glModal'];
-  $allModal = $_POST['allModal'];
-  $sessionDateModal = $_POST['sessionDateModal'];
+  $birthDate = $_POST['birthDate'];
+  $age = $_POST['age'];
+  $sex = $_POST['sex'];
+  $origin = $_POST['origin'];
+  $barangay = $_POST['barangay'];
+  $municipality = $_POST['municipality'];
+  $contactNumber = $_POST['contactNumber'];
 
-  $queryAlreadyExist = "SELECT * FROM patient WHERE lastName='$lastName' AND firstName='$firstName' AND middleName='$middleName'";
-  $resultAlreadyExist = mysqli_query($conn, $queryAlreadyExist);
 
-  if (mysqli_num_rows($resultAlreadyExist) > 0) {
-    $alreadyExist = '
-        <script>
-        window.setTimeout(function() {
-            $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
-              $(this).remove(); 
-            });
-          }, 3000);
-        </script>
-        <div id="alert_message" class="alert alert-danger text-center">
-          Patient Already Exist!
-        </div>
-        ';
-    echo $alreadyExist;
-  } else {
-    $sql = "INSERT INTO patient (uId, lastName, firstName, middleName, ward) 
-              VALUES ('{$uId}', '{$lastName}', '{$firstName}', '{$middleName}', '{$ward}')";
-    if (mysqli_query($conn, $sql)) {
-      if ($allModal == 'on') {
-        $sql2 = "INSERT INTO patientsubsistence (pId, date, breakfast, lunch, dinner, npo, gl) 
-        VALUES ('{$uId}', '{$sessionDateModal}', 'on', 'on', 'on', '{$npoModal}', '{$glModal}')";
-      } else {
-        $sql2 = "INSERT INTO patientsubsistence (pId, date, breakfast, lunch, dinner, npo, gl) 
-        VALUES ('{$uId}', '{$sessionDateModal}', '{$breakfastModal}', '{$lunchModal}', '{$dinnerModal}', '{$npoModal}', '{$glModal}')";
-      }
-
-      if (mysqli_query($conn, $sql2)) {
-        $sql3 = "INSERT INTO reports (pId, date, lastName, firstName, middleName, ward) VALUES ('$uId', '$sessionDateModal', '$lastName', '$firstName', '$middleName', '$ward')";
-        if (mysqli_query($conn, $sql3)) {
-          $saved_user = '
+  $sql = "INSERT INTO patient (lastName, firstName, middleName, birthday, age, sex, origin, barangay, municipality, contactNumber) 
+      VALUES ('$lastName', '$firstName', '$middleName', '$birthDate', '$age', '$sex', '$origin', '$barangay', '$municipality', '$contactNumber')";
+  if (mysqli_query($conn, $sql)) {
+    $saved_user = '
         <script>
         window.setTimeout(function() {
             $("#alert_message").fadeTo(500, 0).slideUp(500, function(){
@@ -79,14 +49,11 @@ if (isset($_POST['save'])) {
           Succesfully Added a new Patient!
         </div>
         ';
-          echo $saved_user;
-        }
-      }
-    } else {
-      echo "Error: " . mysqli_error($conn);
-    }
-    exit();
+    echo $saved_user;
+  } else {
+    echo "Error: " . mysqli_error($conn);
   }
+  exit();
 }
 
 

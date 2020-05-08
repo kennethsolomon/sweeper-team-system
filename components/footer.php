@@ -28,7 +28,7 @@
                 <script>
                     document.write(new Date().getFullYear())
                 </script>
-                <a href="http://www.fb.com/synecders">Kenneth S.</a>, made for Eloisa A.
+                <a href="http://www.fb.com/synecders">Kenneth S.</a>, made for Sweeper Team.
             </p>
         </nav>
     </div>

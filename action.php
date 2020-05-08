@@ -16,6 +16,17 @@ if (isset($_GET['deleteSession'])) {
 }
 
 
+if (isset($_POST['deletePatientBtn'])) {
+    $pId = $_POST['pId'];
+    $sql = "DELETE FROM patient WHERE id=$pId";
+
+    if (mysqli_query($conn, $sql)) {
+        header("Location: index.php");
+    } else {
+        echo "Error deleting record: " . mysqli_error($conn);
+    }
+}
+
 
 if (isset($_POST['updatePatientBtn'])) {
     $pId = $_POST['pId'];

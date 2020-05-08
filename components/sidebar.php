@@ -30,11 +30,18 @@
                 </a>
             </li>
             <li>
-                <a class="nav-link" href="action.php?exportData=1">
+                <a class="nav-link" href="action.php?exportAllData=1">
                     <i class="nc-icon nc-paper-2"></i>
-                    <p>Export</p>
+                    <p>Export All</p>
                 </a>
             </li>
+            <li>
+                <a data-toggle="modal" data-target="#exportMunicipality" class="nav-link" href="#">
+                    <i class="nc-icon nc-paper-2"></i>
+                    <p>Export Municipality</p>
+                </a>
+            </li>
+
             <!-- <li>
                 <a class="nav-link" href="action.php?updateSession=1">
                     <i class="nc-icon nc-paper-2"></i>

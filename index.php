@@ -96,6 +96,7 @@
 
                     <!-- Modal -->
                     <?php include_once './modals/addUserModal.php' ?>
+                    <?php include_once './modals/exportMunicipality.php' ?>
                     <?php include_once './modals/generateReports.php' ?>
 
                     <!-- Autocomplete -->

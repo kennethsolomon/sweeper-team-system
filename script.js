@@ -65,6 +65,23 @@ $(document).ready(function () {
       },
     });
   });
+  $(document).on("click", "#exportMunicipalityBtn", function () {
+    var municipality = $("#municipalityModal").val();
+    $.ajax({
+      url: "server.php",
+      type: "POST",
+      data: {
+        export: 1,
+        municipality: municipality,
+      },
+      success: function (response) {
+        $("#municipality").val("");
+        window.location = "action.php?exportMunicipality=" + municipality;
+        // window.open(response, "_blank");
+        // $("#display_area").append(response);
+      },
+    });
+  });
 
   // delete from database
   $(document).on("click", ".delete", function () {

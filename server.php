@@ -56,7 +56,41 @@ if (isset($_POST['save'])) {
   exit();
 }
 
+if (isset($_POST['export'])) {
+  $municipality = $_POST['municipality'];
 
+  // Get Date and Time
+  date_default_timezone_set("Asia/Manila");
+  $currentDate = date("Y/m/d");
+
+  $filename = "sweeper-$currentDate.xls"; // File Name
+  // Download file
+  header("Content-Disposition: attachment; filename=\"$filename\"");
+  header("Content-Type: application/vnd.ms-excel");
+
+
+  $sql = "SELECT * FROM patient WHERE municipality = '$municipality'";
+  $result = mysqli_query($conn, $sql);
+
+  if (mysqli_num_rows($result) > 0) {
+    $flag = false;
+    while ($row = mysqli_fetch_assoc($result)) {
+      if (!$flag) {
+        // display field/column names as first row
+        $output = implode("\t", array_keys($row)) . "\r\n";
+        $output = mb_convert_encoding($output, 'UTF-16LE', 'UTF-8');
+        echo $output;
+        $flag = true;
+      }
+      $output = implode("\t", array_values($row)) . "\r\n";
+      $output = mb_convert_encoding($output, 'UTF-16LE', 'UTF-8');
+      echo $output;
+    }
+  } else {
+    echo "0 results";
+  }
+  mysqli_close($conn);
+}
 
 // // delete comment fromd database
 // if (isset($_GET['delete'])) {
